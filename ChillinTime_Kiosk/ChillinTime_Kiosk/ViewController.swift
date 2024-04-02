@@ -99,7 +99,7 @@ class ViewController: UIViewController {
             menuData = MenuData.smoothieMenu
         case "에이드" :
             menuData = MenuData.adeMenu
-        case "티" :
+        case "차" :
             menuData = MenuData.teaMenu
         case "디저트" :
             menuData = MenuData.dessertMenu

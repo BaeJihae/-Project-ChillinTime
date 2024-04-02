@@ -14,6 +14,8 @@ class MenuListCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var menuImageView: UIImageView!
     @IBOutlet weak var menuPriceLabel: UILabel!
     @IBOutlet weak var menuNameLabel: UILabel!
+    @IBOutlet weak var iceImageView: UIImageView!
+    @IBOutlet weak var hotImageView: UIImageView!
     
     
     // cell 선택시 색깔 변경
@@ -37,6 +39,15 @@ class MenuListCollectionViewCell: UICollectionViewCell {
         if let image = data.image {
             menuImageView.image = image
         }
+        
+        
+        // 핫 이미지 설정
+        hotImageView.isHidden = data.hot ? false : true
+        
+        
+        // 아이스 이미지 설정
+        iceImageView.isHidden = data.ice ? false : true
+        
         
         
         // 메뉴 가격 설정
