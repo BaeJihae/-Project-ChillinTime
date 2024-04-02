@@ -38,6 +38,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="베스트">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="13"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="reloadBeverages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mbz-pN-Bds"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t14-go-GNM">
                                         <rect key="frame" x="65.666666666666686" y="0.0" width="65.333333333333314" height="29.666666666666668"/>
@@ -46,6 +49,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="커피">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="13"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="reloadBeverages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UYK-pE-zVw"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBs-mw-wgG">
                                         <rect key="frame" x="131" y="0.0" width="65.666666666666686" height="29.666666666666668"/>
@@ -54,6 +60,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="스무디">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="13"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="reloadBeverages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O4Y-0o-hqc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m25-50-yf4">
                                         <rect key="frame" x="196.66666666666666" y="0.0" width="65.333333333333343" height="29.666666666666668"/>
@@ -62,6 +71,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="에이드">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="13"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="reloadBeverages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MPD-ck-ULJ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnx-kl-9Le">
                                         <rect key="frame" x="262" y="0.0" width="65.666666666666686" height="29.666666666666668"/>
@@ -70,6 +82,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="차">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="13"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="reloadBeverages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9XP-nb-8YV"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-9i-CBQ">
                                         <rect key="frame" x="327.66666666666669" y="0.0" width="65.333333333333314" height="29.666666666666668"/>
@@ -78,6 +93,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="디저트">
                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="13"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="reloadBeverages:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wgw-4d-3S8"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.50196078430000002" green="0.79215686269999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -165,6 +183,15 @@
                             <constraint firstItem="bvW-Sq-bAm" firstAttribute="top" secondItem="mh8-xT-4Yv" secondAttribute="bottom" id="gho-Ch-JiR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adeBtn" destination="m25-50-yf4" id="36P-d0-eQ1"/>
+                        <outlet property="bestBtn" destination="Nka-Qi-5sL" id="x6j-wt-Aei"/>
+                        <outlet property="coffeeBtn" destination="t14-go-GNM" id="gEC-y0-HAD"/>
+                        <outlet property="dessertBtn" destination="XO8-9i-CBQ" id="uON-MB-cIQ"/>
+                        <outlet property="smoothieBtn" destination="lBs-mw-wgG" id="AWk-kz-dn1"/>
+                        <outlet property="stackView" destination="bvW-Sq-bAm" id="TAp-QP-Pr6"/>
+                        <outlet property="teaBtn" destination="Mnx-kl-9Le" id="eX5-su-qfm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
