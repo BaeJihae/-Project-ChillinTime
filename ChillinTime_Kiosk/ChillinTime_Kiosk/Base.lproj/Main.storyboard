@@ -188,6 +188,7 @@
                         <outlet property="bestBtn" destination="Nka-Qi-5sL" id="x6j-wt-Aei"/>
                         <outlet property="coffeeBtn" destination="t14-go-GNM" id="gEC-y0-HAD"/>
                         <outlet property="dessertBtn" destination="XO8-9i-CBQ" id="uON-MB-cIQ"/>
+                        <outlet property="menuCollectionView" destination="vOS-0o-L8f" id="oJy-lE-e8F"/>
                         <outlet property="smoothieBtn" destination="lBs-mw-wgG" id="AWk-kz-dn1"/>
                         <outlet property="stackView" destination="bvW-Sq-bAm" id="TAp-QP-Pr6"/>
                         <outlet property="teaBtn" destination="Mnx-kl-9Le" id="eX5-su-qfm"/>
