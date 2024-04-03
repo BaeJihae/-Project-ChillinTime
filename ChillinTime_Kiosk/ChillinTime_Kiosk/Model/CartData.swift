@@ -10,4 +10,5 @@ import Foundation
 struct CartData{
     var cartNum: Int
     var cartName: String
+    var cartPrice: Int
 }
