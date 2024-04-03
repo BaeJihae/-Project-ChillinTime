@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var cartNumLabel: UILabel!
     @IBOutlet weak var totalNumLabel: UILabel!
+    @IBOutlet weak var togoDiscountMessage: UILabel!
     
     
     // 카테고리 버튼
@@ -32,6 +33,10 @@ class ViewController: UIViewController {
     // 메뉴 데이터 ( 베스트 메뉴판으로 초기화 )
     var menuData: [MenuData] = MenuData.bestMenu
     var cartDataManager = CartDataManager()
+    
+    
+    // 포장 / 매장 구분 변수
+    var isTogo = true
     
     
     override func viewDidLoad() {
@@ -52,6 +57,11 @@ class ViewController: UIViewController {
         // cart label 설정
         setCartLabel()
         
+        // 할인 메세지 설정
+        setDiscountMessage()
+        
+        // 라벨 줄 1줄로 설정 및 라벨 사이즈 자동 설정
+        setNumberOfLines()
     }
 
     
@@ -81,6 +91,22 @@ class ViewController: UIViewController {
     func setCartLabelHighlight() {
         highlightNumbers(inLabel: cartNumLabel)
         highlightNumbers(inLabel: totalNumLabel)
+    }
+    
+    
+    // 할인 메세지 설정
+    func setDiscountMessage() {
+        togoDiscountMessage.isHidden = isTogo ? false : true
+    }
+    
+    
+    func setNumberOfLines() {
+        
+        cartNumLabel.numberOfLines = 1
+        cartNumLabel.adjustsFontSizeToFitWidth = true
+
+        totalNumLabel.numberOfLines = 1
+        totalNumLabel.adjustsFontSizeToFitWidth = true
     }
     
     
@@ -134,21 +160,18 @@ class ViewController: UIViewController {
                                     byRoundingCorners: [.topLeft, .topRight],
                                     cornerRadii: CGSize(width: 10, height: 10))
         
-        
         // 메뉴 탭 바 버튼 둥글게
         let maskLayer = CAShapeLayer()
         maskLayer.frame = button.bounds
         maskLayer.path = maskPath.cgPath
         button.layer.mask = maskLayer
         
-        
         // 버튼의 배경 색상과 컬러 변경
         categories.forEach {
+            
             $0?.backgroundColor = UIColor(red: 128/255, green: 202/255, blue: 255/255, alpha: 1)
             $0?.tintColor = .white
-            
         }
-        
         
         // 버튼의 배경 색상과 컬러 설정
         button.backgroundColor = .white
