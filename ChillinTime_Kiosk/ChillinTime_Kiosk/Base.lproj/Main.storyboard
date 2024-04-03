@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HVw-GA-TuQ">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -14,7 +14,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ChillinTime_Kiosk" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ChillinTime_Kiosk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9DW-P5-5Cx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,10 +30,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="bvW-Sq-bAm">
-                                <rect key="frame" x="0.0" y="104" width="393" height="30"/>
+                                <rect key="frame" x="0.0" y="104" width="393" height="36.666666666666657"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nka-Qi-5sL">
-                                        <rect key="frame" x="0.0" y="0.0" width="65.666666666666671" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="65.666666666666671" height="36.666666666666664"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="GBk-kx-OHC"/>
                                         </constraints>
@@ -47,7 +47,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t14-go-GNM">
-                                        <rect key="frame" x="65.666666666666686" y="0.0" width="65.333333333333314" height="30"/>
+                                        <rect key="frame" x="65.666666666666686" y="0.0" width="65.333333333333314" height="36.666666666666664"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="커피">
@@ -58,7 +58,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lBs-mw-wgG">
-                                        <rect key="frame" x="131" y="0.0" width="65.666666666666686" height="30"/>
+                                        <rect key="frame" x="131" y="0.0" width="65.666666666666686" height="36.666666666666664"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="스무디">
@@ -69,7 +69,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m25-50-yf4">
-                                        <rect key="frame" x="196.66666666666666" y="0.0" width="65.333333333333343" height="30"/>
+                                        <rect key="frame" x="196.66666666666666" y="0.0" width="65.333333333333343" height="36.666666666666664"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="에이드">
@@ -80,7 +80,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mnx-kl-9Le">
-                                        <rect key="frame" x="262" y="0.0" width="65.666666666666686" height="30"/>
+                                        <rect key="frame" x="262" y="0.0" width="65.666666666666686" height="36.666666666666664"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="차">
@@ -91,7 +91,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XO8-9i-CBQ">
-                                        <rect key="frame" x="327.66666666666669" y="0.0" width="65.333333333333314" height="30"/>
+                                        <rect key="frame" x="327.66666666666669" y="0.0" width="65.333333333333314" height="36.666666666666664"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="디저트">
@@ -113,7 +113,7 @@
                                 </constraints>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" restorationIdentifier="menuListView" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="vOS-0o-L8f">
-                                <rect key="frame" x="17" y="151" width="359" height="454"/>
+                                <rect key="frame" x="17" y="157.66666666666666" width="359" height="447.33333333333337"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="La0-Wd-Fti">
                                     <size key="itemSize" width="190" height="190"/>
@@ -423,6 +423,7 @@
                         <outlet property="smoothieBtn" destination="lBs-mw-wgG" id="AWk-kz-dn1"/>
                         <outlet property="stackView" destination="bvW-Sq-bAm" id="TAp-QP-Pr6"/>
                         <outlet property="teaBtn" destination="Mnx-kl-9Le" id="eX5-su-qfm"/>
+                        <outlet property="togoDiscountMessage" destination="Rc9-UO-E3G" id="atj-Vb-AhA"/>
                         <outlet property="totalNumLabel" destination="aGm-O7-wLh" id="O25-hD-mBi"/>
                     </connections>
                 </viewController>
@@ -430,12 +431,67 @@
             </objects>
             <point key="canvasLocation" x="-550.38167938931292" y="-58.450704225352112"/>
         </scene>
+        <!--Togo View Controller-->
+        <scene sceneID="y4G-aI-vWE">
+            <objects>
+                <viewController storyboardIdentifier="TogoViewController" id="HVw-GA-TuQ" customClass="TogoViewController" customModule="ChillinTime_Kiosk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tjq-cM-K6u">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Togo" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omt-Bo-sGY">
+                                <rect key="frame" x="112" y="296" width="168" height="169"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="TogoImage"/>
+                                <connections>
+                                    <action selector="togo:" destination="HVw-GA-TuQ" eventType="touchUpInside" id="kNq-3Q-GGD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Here" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HfV-4g-9L5">
+                                <rect key="frame" x="112" y="523" width="168" height="171"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" backgroundImage="HereImage"/>
+                                <connections>
+                                    <action selector="here:" destination="HVw-GA-TuQ" eventType="touchUpInside" id="xAP-SJ-g4V"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select to go or here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lJj-dn-7gx">
+                                <rect key="frame" x="108" y="214" width="176" height="24"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="원하시는 메뉴를 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGg-XD-XHY">
+                                <rect key="frame" x="77" y="169" width="239" height="69"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Ta-ml-eIV"/>
+                        <color key="backgroundColor" red="0.50196078430000002" green="0.79215686269999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="here" destination="HfV-4g-9L5" id="TVr-rI-MWW"/>
+                        <outlet property="togo" destination="Omt-Bo-sGY" id="9EG-or-1ow"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Hl-7b-E3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1297" y="-58"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="BackButton" width="772" height="772"/>
+        <image name="BackButton" width="386" height="386"/>
         <image name="COLD" width="209" height="209"/>
         <image name="HOT" width="208.5" height="209"/>
-        <image name="HomeButton" width="772" height="772"/>
+        <image name="HereImage" width="375" height="375"/>
+        <image name="HomeButton" width="386" height="386"/>
+        <image name="TogoImage" width="375" height="375.5"/>
         <image name="buttonBackground" width="77" height="22"/>
         <image name="deleteBtn" width="10" height="10"/>
         <image name="minus" catalog="system" width="128" height="26"/>

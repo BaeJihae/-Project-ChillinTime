@@ -13,33 +13,43 @@ class TogoViewController: UIViewController {
     @IBOutlet weak var togo: UIButton!
     @IBOutlet weak var here: UIButton!
     
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    // 포장 버튼 클릭시 다음 페이지 이동 구현
     @IBAction func togo(_ sender: Any) {
-        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "NextPageViewController")
-                vcName?.modalPresentationStyle = .fullScreen //전체화면으로 보이게 설정
-                vcName?.modalTransitionStyle = .crossDissolve //전환 애니메이션 설정
-                self.present(vcName!, animated: true, completion: nil)
+        
+        guard let vcName = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
+            return
+        }
+        
+        // 전체 화면으로 설정 / 전환 애니메이션
+        vcName.modalPresentationStyle = .fullScreen
+        vcName.modalTransitionStyle = .crossDissolve
+        
+        vcName.isTogo = true
+        
+        self.present(vcName, animated: true, completion: nil)
     }
     
+    
+    // 매장 버튼 클릭시 다음 페이지 이동 구현
     @IBAction func here(_ sender: Any) {
-        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "NextPageViewController")
-                vcName?.modalPresentationStyle = .fullScreen //전체화면으로 보이게 설정
-                vcName?.modalTransitionStyle = .crossDissolve //전환 애니메이션 설정
-                self.present(vcName!, animated: true, completion: nil)
+        
+        guard let vcName = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as? ViewController else {
+            return
+        }
+        
+        // 전체 화면으로 설정 / 전환 애니메이션
+        vcName.modalPresentationStyle = .fullScreen
+        vcName.modalTransitionStyle = .crossDissolve
+        
+        vcName.isTogo = false
+        
+        self.present(vcName, animated: true, completion: nil)
     }
 }
