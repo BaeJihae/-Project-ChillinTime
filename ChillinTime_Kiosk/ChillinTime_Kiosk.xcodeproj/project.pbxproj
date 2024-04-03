@@ -16,6 +16,8 @@
 		2EDAEB792BBC673B00337072 /* CartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB782BBC673B00337072 /* CartData.swift */; };
 		2EDAEB7B2BBC675E00337072 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7A2BBC675E00337072 /* MenuData.swift */; };
 		2EDAEB7E2BBC67A700337072 /* CartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7D2BBC67A700337072 /* CartDataManager.swift */; };
+		7820FFD62BBCDF8B00ED56B5 /* Ahyeon.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7820FFD52BBCDF8B00ED56B5 /* Ahyeon.storyboard */; };
+		7820FFD82BBCE9FF00ED56B5 /* TogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */; };
 		2EDAEB802BBC719C00337072 /* MenuListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */; };
 		2EDAEB822BBCEC4700337072 /* CartListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */; };
 		7B561D9D2BBCF60300C8427C /* TotalHomeBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B561D9C2BBCF60300C8427C /* TotalHomeBack.swift */; };
@@ -33,6 +35,8 @@
 		2EDAEB782BBC673B00337072 /* CartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartData.swift; sourceTree = "<group>"; };
 		2EDAEB7A2BBC675E00337072 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
 		2EDAEB7D2BBC67A700337072 /* CartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataManager.swift; sourceTree = "<group>"; };
+		7820FFD52BBCDF8B00ED56B5 /* Ahyeon.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ahyeon.storyboard; sourceTree = "<group>"; };
+		7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogoViewController.swift; sourceTree = "<group>"; };
 		2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListCollectionViewCell.swift; sourceTree = "<group>"; };
 		2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListTableViewCell.swift; sourceTree = "<group>"; };
 		7B561D9C2BBCF60300C8427C /* TotalHomeBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHomeBack.swift; sourceTree = "<group>"; };
@@ -75,7 +79,9 @@
 				2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */,
 				7B561D9C2BBCF60300C8427C /* TotalHomeBack.swift */,
 				2EDAEB682BBC644900337072 /* ViewController.swift */,
+				7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */,
 				2EDAEB6A2BBC644900337072 /* Main.storyboard */,
+				7820FFD52BBCDF8B00ED56B5 /* Ahyeon.storyboard */,
 				2EDAEB6D2BBC644B00337072 /* Assets.xcassets */,
 				2EDAEB6F2BBC644B00337072 /* LaunchScreen.storyboard */,
 				2EDAEB722BBC644B00337072 /* Info.plist */,
@@ -151,6 +157,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7820FFD62BBCDF8B00ED56B5 /* Ahyeon.storyboard in Resources */,
 				2EDAEB6E2BBC644B00337072 /* Assets.xcassets in Resources */,
 				2EDAEB712BBC644B00337072 /* Base in Resources */,
 				2EDAEB6C2BBC644900337072 /* Base in Resources */,
@@ -167,6 +174,7 @@
 				2EDAEB692BBC644900337072 /* ViewController.swift in Sources */,
 				2EDAEB7E2BBC67A700337072 /* CartDataManager.swift in Sources */,
 				2EDAEB792BBC673B00337072 /* CartData.swift in Sources */,
+				7820FFD82BBCE9FF00ED56B5 /* TogoViewController.swift in Sources */,
 				2EDAEB7B2BBC675E00337072 /* MenuData.swift in Sources */,
 				7B561D9D2BBCF60300C8427C /* TotalHomeBack.swift in Sources */,
 				2EDAEB652BBC644900337072 /* AppDelegate.swift in Sources */,
@@ -329,7 +337,7 @@
 				INFOPLIST_FILE = ChillinTime_Kiosk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Ahyeon;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -362,7 +370,7 @@
 				INFOPLIST_FILE = ChillinTime_Kiosk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Ahyeon;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
