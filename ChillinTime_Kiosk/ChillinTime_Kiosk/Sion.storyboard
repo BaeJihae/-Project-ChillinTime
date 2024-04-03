@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Djy-Rw-Bds">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TotalHomeBack-->
+        <scene sceneID="L5g-cL-tG4">
+            <objects>
+                <viewController title="TotalHomeBack" id="Djy-Rw-Bds" customClass="TotalHomeBackVC" customModule="ChillinTime" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kR0-rx-22h">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mge-DO-HVK" userLabel="Box">
+                                <rect key="frame" x="0.0" y="638" width="393" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jJb-I4-YqH">
+                                        <rect key="frame" x="21" y="121.66666666666663" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="90t-9e-CDQ"/>
+                                            <constraint firstAttribute="width" constant="30" id="EoR-FM-PbJ"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.50196078430000002" green="0.79215686269999996" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="HomeButton" symbolScale="medium"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NcP-C4-NAT">
+                                        <rect key="frame" x="60" y="121.66666666666663" width="30" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="MAb-Bc-8UK"/>
+                                            <constraint firstAttribute="height" constant="30" id="rWE-O2-taR"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.50196078430000002" green="0.79215686269999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="">
+                                            <imageReference key="image" image="BackButton" symbolScale="medium"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문할 메뉴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7h-qy-3Gc">
+                                        <rect key="frame" x="24" y="17" width="73.666666666666671" height="19.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBy-Xx-Xmq">
+                                        <rect key="frame" x="237" y="17" width="48" height="19.666666666666671"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="48" id="egK-R1-79u"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="9000000개" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDT-9O-aq9">
+                                        <rect key="frame" x="109.66666666666669" y="17" width="82" height="19.666666666666671"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1115,000원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XfV-3N-AgO">
+                                        <rect key="frame" x="293" y="17" width="76" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500원 포장할인이 적용되었습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8W-tV-rWA">
+                                        <rect key="frame" x="271" y="6" width="98" height="9"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="7"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="NcP-C4-NAT" firstAttribute="leading" secondItem="jJb-I4-YqH" secondAttribute="trailing" constant="9" id="2Tt-JB-SZW"/>
+                                    <constraint firstItem="XfV-3N-AgO" firstAttribute="top" secondItem="mge-DO-HVK" secondAttribute="top" constant="17" id="4VN-cB-I4Q"/>
+                                    <constraint firstItem="jJb-I4-YqH" firstAttribute="leading" secondItem="mge-DO-HVK" secondAttribute="leading" constant="21" id="5PV-j2-7yc"/>
+                                    <constraint firstItem="J7h-qy-3Gc" firstAttribute="top" secondItem="mge-DO-HVK" secondAttribute="top" constant="17" id="Bfh-aT-NR5"/>
+                                    <constraint firstItem="sDT-9O-aq9" firstAttribute="leading" secondItem="J7h-qy-3Gc" secondAttribute="trailing" constant="12" id="EPZ-tH-pV8"/>
+                                    <constraint firstAttribute="trailing" secondItem="XfV-3N-AgO" secondAttribute="trailing" constant="24" id="Gf4-Rq-KRj"/>
+                                    <constraint firstItem="v8W-tV-rWA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mge-DO-HVK" secondAttribute="leading" constant="20" symbolic="YES" id="HXi-kz-nfl"/>
+                                    <constraint firstItem="vBy-Xx-Xmq" firstAttribute="top" secondItem="mge-DO-HVK" secondAttribute="top" constant="17" id="IYt-wB-4Kb"/>
+                                    <constraint firstItem="sDT-9O-aq9" firstAttribute="top" secondItem="mge-DO-HVK" secondAttribute="top" constant="17" id="Kf5-Nx-uK6"/>
+                                    <constraint firstItem="vBy-Xx-Xmq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sDT-9O-aq9" secondAttribute="trailing" constant="8" symbolic="YES" id="OmE-Rd-6oJ"/>
+                                    <constraint firstItem="XfV-3N-AgO" firstAttribute="top" secondItem="v8W-tV-rWA" secondAttribute="bottom" constant="2" id="WSr-bG-CGD"/>
+                                    <constraint firstItem="XfV-3N-AgO" firstAttribute="leading" secondItem="vBy-Xx-Xmq" secondAttribute="trailing" constant="8" id="bee-PT-coY"/>
+                                    <constraint firstItem="NcP-C4-NAT" firstAttribute="top" secondItem="J7h-qy-3Gc" secondAttribute="bottom" constant="85" id="hLc-UE-mCq"/>
+                                    <constraint firstItem="NcP-C4-NAT" firstAttribute="leading" secondItem="jJb-I4-YqH" secondAttribute="trailing" constant="9" id="j06-XF-W8i"/>
+                                    <constraint firstItem="XfV-3N-AgO" firstAttribute="top" secondItem="mge-DO-HVK" secondAttribute="top" constant="17" id="mD9-Pk-BSn"/>
+                                    <constraint firstItem="J7h-qy-3Gc" firstAttribute="leading" secondItem="mge-DO-HVK" secondAttribute="leading" constant="24" id="mEe-bi-npk"/>
+                                    <constraint firstItem="jJb-I4-YqH" firstAttribute="top" secondItem="J7h-qy-3Gc" secondAttribute="bottom" constant="85" id="ms0-nG-NCE"/>
+                                    <constraint firstAttribute="trailing" secondItem="v8W-tV-rWA" secondAttribute="trailing" constant="24" id="qxk-9s-J3l"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kjX-lf-DgE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mge-DO-HVK" firstAttribute="bottom" secondItem="kjX-lf-DgE" secondAttribute="bottom" id="CQp-dh-bzJ"/>
+                            <constraint firstItem="mge-DO-HVK" firstAttribute="bottom" secondItem="kjX-lf-DgE" secondAttribute="bottom" id="jsY-od-tU6"/>
+                            <constraint firstItem="mge-DO-HVK" firstAttribute="trailing" secondItem="kR0-rx-22h" secondAttribute="trailing" id="kvt-bi-Nhn"/>
+                            <constraint firstItem="mge-DO-HVK" firstAttribute="top" secondItem="kjX-lf-DgE" secondAttribute="top" constant="579" id="mwM-kn-Qyw"/>
+                            <constraint firstItem="mge-DO-HVK" firstAttribute="leading" secondItem="kjX-lf-DgE" secondAttribute="leading" id="zY0-a7-nh2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="NcP-C4-NAT" id="yrU-il-kZR"/>
+                        <outlet property="cartNumLabel" destination="sDT-9O-aq9" id="9QP-dI-slP"/>
+                        <outlet property="homeButton" destination="jJb-I4-YqH" id="jdg-jR-iAd"/>
+                        <outlet property="totalNumLabel" destination="XfV-3N-AgO" id="xVt-hH-Mhn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9af-sg-m4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="987" y="-27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BackButton" width="772" height="772"/>
+        <image name="HomeButton" width="772" height="772"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
