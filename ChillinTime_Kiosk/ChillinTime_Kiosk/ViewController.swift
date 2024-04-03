@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var menuCollectionView: UICollectionView!
     @IBOutlet weak var cartTableView: UITableView!
+    @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var cartNumLabel: UILabel!
+    @IBOutlet weak var totalNumLabel: UILabel!
     
     
     // 카테고리 버튼
@@ -42,6 +46,12 @@ class ViewController: UIViewController {
         // 테이블 뷰 설정
         setTableView()
         
+        // cart 라벨 하이라이트 설정
+        setCartLabelHighlight()
+        
+        // cart label 설정
+        setCartLabel()
+        
     }
 
     
@@ -64,6 +74,57 @@ class ViewController: UIViewController {
     // 처음 화면 로드 시 버튼 컬러 변경
     func setBackColor() {
         changeBackColor(button: bestBtn)
+    }
+    
+    
+    // cart에 담긴 총 합과 cart에 담긴 총 개수 글자 하이라이트 세팅
+    func setCartLabelHighlight() {
+        highlightNumbers(inLabel: cartNumLabel)
+        highlightNumbers(inLabel: totalNumLabel)
+    }
+    
+    
+    // cart label 설정
+    func setCartLabel() {
+        
+        let cartNum: Int = cartDataManager.countCartData()
+        let totalPrice: Int = cartDataManager.countTotal()
+        
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        
+        let totalPriceResult = numberFormatter.string(from: NSNumber(value:totalPrice))!
+    
+        cartNumLabel.text = "\(cartNum)개"
+        totalNumLabel.text = "\(totalPriceResult)원"
+    }
+    
+    
+    // cart에 담긴 총 합과 cart에 담긴 총 개수 글자 하이라이트 구현
+    func highlightNumbers(inLabel label: UILabel) {
+        
+        guard let text = label.text else { return }
+        let attributedText = NSMutableAttributedString(string: text)
+        
+        // 문자열 내 숫자부분 색상 및 볼드처리
+        for (index, character) in text.enumerated() {
+            
+            if character.isNumber || character == ","  {
+                
+                let range = NSRange(location: index,
+                                    length: 1)
+                
+                attributedText.addAttribute(.foregroundColor,
+                                            value: UIColor.red,
+                                            range: range)
+                
+                attributedText.addAttribute(.font,
+                                            value: UIFont.systemFont(ofSize: 16, weight: .bold),
+                                            range: range)
+            }
+        }
+        
+        label.attributedText = attributedText
     }
     
     
@@ -159,13 +220,15 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
 
     
-    // collectionView 선택시 셀 배경색 변경 / cart에 추가
+    // collectionView 선택시 cart에 추가
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         
-        cartDataManager.addCartData(name: menuData[indexPath.row].name)
+        cartDataManager.addCartData(name: menuData[indexPath.row].name, price: menuData[indexPath.row].price)
         
         cartTableView.reloadData()
+        
+        setCartLabel()
     }
     
     
@@ -226,15 +289,19 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         // data 삭제 수행
         cell.deleteButtonAction = {
+            
             self.cartDataManager.deleteCartData(indexPath)
             self.cartTableView.reloadData()
+            self.setCartLabel()
         }
         
         
         // data 업데이트 수행
         cell.updateCartNumAction = {
+            
             self.cartDataManager.updateCartNum(indexPath, cell.orderAmount)
             self.cartTableView.reloadData()
+            self.setCartLabel()
         }
         
         
