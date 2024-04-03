@@ -37,11 +37,25 @@ struct CartDataManager {
         CartDataManager.cart[index.row].cartNum = cartNum
     }
     
+    
+    // cart 물건의 수
     func countCartData() -> Int {
         return CartDataManager.cart.reduce(0) { $0 + $1.cartNum }
     }
     
-    func countTotal() -> Int {
-        return CartDataManager.cart.reduce(0) { $0 + $1.cartNum * $1.cartPrice }
+    
+    // cart 총 합
+    func countTotal(_ isTogo: Bool) -> Int {
+        if isTogo {
+            return CartDataManager.cart.reduce(0) { $0 + $1.cartNum * $1.cartPrice } - 500
+        }else {
+            return CartDataManager.cart.reduce(0) { $0 + $1.cartNum * $1.cartPrice }
+        }
+    }
+    
+    
+    // cart 전체 삭제
+    func removeAllData() {
+        CartDataManager.cart = []
     }
 }
