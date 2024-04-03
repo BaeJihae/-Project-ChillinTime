@@ -19,6 +19,7 @@
 		2EDAEB802BBC719C00337072 /* MenuListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */; };
 		7B561D9D2BBCF60300C8427C /* TotalHomeBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B561D9C2BBCF60300C8427C /* TotalHomeBack.swift */; };
 		7B561DA12BBCF62E00C8427C /* Sion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B561DA02BBCF62E00C8427C /* Sion.storyboard */; };
+		2EDAEB822BBCEC4700337072 /* CartListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B561D9C2BBCF60300C8427C /* TotalHomeBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHomeBack.swift; sourceTree = "<group>"; };
 		7B561DA02BBCF62E00C8427C /* Sion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sion.storyboard; sourceTree = "<group>"; };
+		2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 				2EDAEB7C2BBC676400337072 /* Model */,
 				2EDAEB642BBC644900337072 /* AppDelegate.swift */,
 				2EDAEB662BBC644900337072 /* SceneDelegate.swift */,
+				2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */,
 				2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */,
 				7B561D9C2BBCF60300C8427C /* TotalHomeBack.swift */,
 				2EDAEB682BBC644900337072 /* ViewController.swift */,
@@ -173,6 +176,7 @@
 				2EDAEB652BBC644900337072 /* AppDelegate.swift in Sources */,
 				2EDAEB802BBC719C00337072 /* MenuListCollectionViewCell.swift in Sources */,
 				2EDAEB672BBC644900337072 /* SceneDelegate.swift in Sources */,
+				2EDAEB822BBCEC4700337072 /* CartListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -49,7 +49,6 @@ class MenuListCollectionViewCell: UICollectionViewCell {
         iceImageView.isHidden = data.ice ? false : true
         
         
-        
         // 메뉴 가격 설정
         menuPriceLabel.text = String(data.price) + "원"
         
