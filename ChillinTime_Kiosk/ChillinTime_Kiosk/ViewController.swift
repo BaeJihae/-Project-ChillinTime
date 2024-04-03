@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var dessertBtn: UIButton!
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var menuCollectionView: UICollectionView!
+    @IBOutlet weak var cartTableView: UITableView!
     
     
     // 카테고리 버튼
@@ -32,8 +33,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // 카테고리 배경색 설정
         setBackColor()
+        
+        // 컬렉션 뷰 설정
         setCollectionView()
+        
+        // 테이블 뷰 설정
+        setTableView()
+        
     }
 
     
@@ -48,6 +56,7 @@ class ViewController: UIViewController {
             changeMenuData(buttonName)
         }
         
+        // 데이터 수정할 때마다 cell reload
         menuCollectionView.reloadData()
     }
 
@@ -153,7 +162,10 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     // collectionView 선택시 셀 배경색 변경 / cart에 추가
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
+        
         cartDataManager.addCartData(name: menuData[indexPath.row].name)
+        
+        cartTableView.reloadData()
     }
     
     
@@ -176,4 +188,63 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     
     
     
+}
+
+
+
+extension ViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    
+    // tableView setting
+    func setTableView() {
+        
+        cartTableView.dataSource = self
+        cartTableView.delegate = self
+    }
+    
+    
+    // tableview Cell 수
+    func tableView(_ tableView: UITableView, 
+                   numberOfRowsInSection section: Int) -> Int {
+        
+        return cartDataManager.getCartData().count
+    }
+    
+    
+    // tableview와 cell 연결
+    func tableView(_ tableView: UITableView, 
+                   cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        guard let cell = cartTableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as? CartListTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        
+        let cartData = cartDataManager.getCartData()
+        
+        
+        // data 삭제 수행
+        cell.deleteButtonAction = {
+            self.cartDataManager.deleteCartData(indexPath)
+            self.cartTableView.reloadData()
+        }
+        
+        
+        // data 업데이트 수행
+        cell.updateCartNumAction = {
+            self.cartDataManager.updateCartNum(indexPath, cell.orderAmount)
+            self.cartTableView.reloadData()
+        }
+        
+        
+        // cell에 데이터 표시
+        if !cartData.isEmpty {
+            cell.selectedLabel.text = cartData[indexPath.row].cartName
+            cell.countLabel.text = String(cartData[indexPath.row].cartNum)
+        }
+        
+        
+        return cell
+    }
 }

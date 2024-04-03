@@ -10,19 +10,32 @@ import Foundation
 struct CartDataManager {
     
     
-    private var cart: [CartData] = []
+    private static var cart: [CartData] = []
     
     
+    // cart 데이터 추가
     mutating func addCartData(name: String) {
-        cart.filter{ $0.cartName == name }.count == 0 ? cart.append(CartData(cartNum: 1, cartName: name)) : print("이미 들어있는 메뉴입니다.")
+        CartDataManager.cart.filter{ $0.cartName == name }.count == 0 ? CartDataManager.cart.append(CartData(cartNum: 1, cartName: name)) : print("이미 들어있는 메뉴입니다.")
     }
     
     
+    // cart 데이터 받기
     func getCartData() -> [CartData] {
-        return cart
+        return CartDataManager.cart
     }
     
     
+    // cart 데이터 삭제
+    mutating func deleteCartData(_ index: IndexPath) {
+        CartDataManager.cart.remove(at: index.row)
+    }
+    
+    
+    // cart 데이터 업데이트
+    mutating func updateCartNum(_ index: IndexPath,
+                                _ cartNum: Int) {
+        CartDataManager.cart[index.row].cartNum = cartNum
+    }
     
 }
 
