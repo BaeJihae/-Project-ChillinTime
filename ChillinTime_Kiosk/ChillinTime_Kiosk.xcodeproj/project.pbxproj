@@ -17,6 +17,8 @@
 		2EDAEB7B2BBC675E00337072 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7A2BBC675E00337072 /* MenuData.swift */; };
 		2EDAEB7E2BBC67A700337072 /* CartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7D2BBC67A700337072 /* CartDataManager.swift */; };
 		2EDAEB802BBC719C00337072 /* MenuListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */; };
+		6A180D7C2BBCFCBD007DE2E6 /* AllCancelOrder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A180D7B2BBCFCBD007DE2E6 /* AllCancelOrder.storyboard */; };
+		6A180D7E2BBCFCCE007DE2E6 /* AllCancelOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A180D7D2BBCFCCE007DE2E6 /* AllCancelOrderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		2EDAEB7A2BBC675E00337072 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
 		2EDAEB7D2BBC67A700337072 /* CartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataManager.swift; sourceTree = "<group>"; };
 		2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListCollectionViewCell.swift; sourceTree = "<group>"; };
+		6A180D7B2BBCFCBD007DE2E6 /* AllCancelOrder.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AllCancelOrder.storyboard; sourceTree = "<group>"; };
+		6A180D7D2BBCFCCE007DE2E6 /* AllCancelOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCancelOrderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +77,8 @@
 				2EDAEB6D2BBC644B00337072 /* Assets.xcassets */,
 				2EDAEB6F2BBC644B00337072 /* LaunchScreen.storyboard */,
 				2EDAEB722BBC644B00337072 /* Info.plist */,
+				6A180D7B2BBCFCBD007DE2E6 /* AllCancelOrder.storyboard */,
+				6A180D7D2BBCFCCE007DE2E6 /* AllCancelOrderViewController.swift */,
 			);
 			path = ChillinTime_Kiosk;
 			sourceTree = "<group>";
@@ -148,6 +154,7 @@
 				2EDAEB6E2BBC644B00337072 /* Assets.xcassets in Resources */,
 				2EDAEB712BBC644B00337072 /* Base in Resources */,
 				2EDAEB6C2BBC644900337072 /* Base in Resources */,
+				6A180D7C2BBCFCBD007DE2E6 /* AllCancelOrder.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +168,7 @@
 				2EDAEB692BBC644900337072 /* ViewController.swift in Sources */,
 				2EDAEB7E2BBC67A700337072 /* CartDataManager.swift in Sources */,
 				2EDAEB792BBC673B00337072 /* CartData.swift in Sources */,
+				6A180D7E2BBCFCCE007DE2E6 /* AllCancelOrderViewController.swift in Sources */,
 				2EDAEB7B2BBC675E00337072 /* MenuData.swift in Sources */,
 				2EDAEB652BBC644900337072 /* AppDelegate.swift in Sources */,
 				2EDAEB802BBC719C00337072 /* MenuListCollectionViewCell.swift in Sources */,
@@ -321,7 +329,7 @@
 				INFOPLIST_FILE = ChillinTime_Kiosk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = AllCancelOrder;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -354,7 +362,7 @@
 				INFOPLIST_FILE = ChillinTime_Kiosk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = AllCancelOrder;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
