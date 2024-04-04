@@ -395,7 +395,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     // collectionView와 cell 연결 / menuData 전달
     func collectionView(_ collectionView: UICollectionView,
                         cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MenuCell", for: indexPath) as? MenuListCollectionViewCell else {
             return UICollectionViewCell()
         }
@@ -404,7 +404,7 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         
         return cell
     }
-
+    
     
     // collectionView 선택시 cart에 추가
     func collectionView(_ collectionView: UICollectionView,
@@ -415,6 +415,8 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         cartTableView.reloadData()
         
         setCartLabel()
+        
+        performSegue(withIdentifier: "PopupModal", sender: indexPath)
     }
     
     
