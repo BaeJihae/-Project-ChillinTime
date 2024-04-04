@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var cartNumLabel: UILabel!
     @IBOutlet weak var totalNumLabel: UILabel!
+    @IBOutlet weak var togoDiscountMessage: UILabel!
     
     
     // 카테고리 버튼
@@ -32,6 +33,10 @@ class ViewController: UIViewController {
     // 메뉴 데이터 ( 베스트 메뉴판으로 초기화 )
     var menuData: [MenuData] = MenuData.bestMenu
     var cartDataManager = CartDataManager()
+    
+    
+    // 포장 / 매장 구분 변수
+    var isTogo = true
     
     
     override func viewDidLoad() {
@@ -52,6 +57,11 @@ class ViewController: UIViewController {
         // cart label 설정
         setCartLabel()
         
+        // 할인 메세지 설정
+        setDiscountMessage()
+        
+        // 라벨 줄 1줄로 설정 및 라벨 사이즈 자동 설정
+        setNumberOfLines()
     }
 
     
@@ -69,6 +79,64 @@ class ViewController: UIViewController {
         // 데이터 수정할 때마다 cell reload
         menuCollectionView.reloadData()
     }
+    
+    
+    // 모두 취소 버튼 클릭 시 구현
+    @IBAction func allCancelButton(_ sender: UIButton) {
+        
+        let alertControl = UIAlertController(title: "메뉴를 삭제하시겠습니까?", message: "", preferredStyle: .alert)
+                
+        let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
+        alertControl.addAction(cancelButton)
+
+        let deleteButton = UIAlertAction(title: "삭제", style: .default) { _ in
+            
+            if !self.cartDataManager.getCartData().isEmpty {
+                
+                self.cartDataManager.removeAllData()
+                self.setCartLabel()
+                print("메뉴가 삭제되었습니다.")
+                
+            } else {
+                
+                print("삭제할 메뉴가 없습니다.")
+            }
+            
+            self.cartTableView.reloadData()
+        }
+        
+        alertControl.addAction(deleteButton)
+                
+        self.present(alertControl, animated: true, completion: nil)
+    }
+    
+    
+    // 뒤로가기 버튼 구현
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        
+        self.cartDataManager.removeAllData()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    // 주문 버튼 클릭 시 구현
+    @IBAction func orderButton(_ sender: UIButton) {
+        
+        let alertControl = UIAlertController(title: "결제하시겠습니까?", message: "", preferredStyle: .alert)
+        
+        let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
+        alertControl.addAction(cancelButton)
+        
+        let confirmButton = UIAlertAction(title: "확인", style: .default) { _ in
+            if !self.cartDataManager.getCartData().isEmpty {
+                self.showPaymentScreen()
+            }
+        }
+        
+        alertControl.addAction(confirmButton)
+        
+        self.present(alertControl, animated: true, completion: nil)
+    }
 
     
     // 처음 화면 로드 시 버튼 컬러 변경
@@ -84,11 +152,27 @@ class ViewController: UIViewController {
     }
     
     
+    // 할인 메세지 설정
+    func setDiscountMessage() {
+        togoDiscountMessage.isHidden = isTogo ? false : true
+    }
+    
+    
+    func setNumberOfLines() {
+        
+        cartNumLabel.numberOfLines = 1
+        cartNumLabel.adjustsFontSizeToFitWidth = true
+
+        totalNumLabel.numberOfLines = 1
+        totalNumLabel.adjustsFontSizeToFitWidth = true
+    }
+    
+    
     // cart label 설정
     func setCartLabel() {
         
         let cartNum: Int = cartDataManager.countCartData()
-        let totalPrice: Int = cartDataManager.countTotal()
+        let totalPrice: Int = cartDataManager.countTotal(isTogo)
         
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
@@ -97,6 +181,12 @@ class ViewController: UIViewController {
     
         cartNumLabel.text = "\(cartNum)개"
         totalNumLabel.text = "\(totalPriceResult)원"
+    }
+    
+    
+    // 결제 페이지 이동
+    func showPaymentScreen(){
+        print("결제")
     }
     
     
@@ -134,21 +224,18 @@ class ViewController: UIViewController {
                                     byRoundingCorners: [.topLeft, .topRight],
                                     cornerRadii: CGSize(width: 10, height: 10))
         
-        
         // 메뉴 탭 바 버튼 둥글게
         let maskLayer = CAShapeLayer()
         maskLayer.frame = button.bounds
         maskLayer.path = maskPath.cgPath
         button.layer.mask = maskLayer
         
-        
         // 버튼의 배경 색상과 컬러 변경
         categories.forEach {
+            
             $0?.backgroundColor = UIColor(red: 128/255, green: 202/255, blue: 255/255, alpha: 1)
             $0?.tintColor = .white
-            
         }
-        
         
         // 버튼의 배경 색상과 컬러 설정
         button.backgroundColor = .white
