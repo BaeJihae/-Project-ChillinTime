@@ -13,7 +13,7 @@
         <!--TotalHomeBack-->
         <scene sceneID="L5g-cL-tG4">
             <objects>
-                <viewController title="TotalHomeBack" id="Djy-Rw-Bds" customClass="TotalHomeBackVC" customModule="ChillinTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TotalHomeBack" id="Djy-Rw-Bds" customClass="TotalHomeBackVC" customModule="ChillinTime_Kiosk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kR0-rx-22h">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9af-sg-m4K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="987" y="-27"/>
+            <point key="canvasLocation" x="961" y="-21"/>
         </scene>
     </scenes>
     <resources>
