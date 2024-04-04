@@ -22,11 +22,11 @@ class MenuListCollectionViewCell: UICollectionViewCell {
     override var isHighlighted: Bool {
         didSet {
             guard self.isHighlighted else { return }
-            
+        
             contentView.backgroundColor = UIColor(red: 128/255, green: 202/255, blue: 255/255, alpha: 0.3)
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3){
-                self.contentView.backgroundColor = .white
+                self.contentView.backgroundColor = .clear
             }
         }
     }
@@ -51,10 +51,12 @@ class MenuListCollectionViewCell: UICollectionViewCell {
         
         // 메뉴 가격 설정
         menuPriceLabel.text = String(data.price) + "원"
+        menuPriceLabel.layer.masksToBounds = true
         
         
         // 메뉴 이름 설정
         menuNameLabel.text = data.name
+        menuNameLabel.layer.masksToBounds = true
         
         
         // 메뉴 cell 테두리 설정
@@ -62,9 +64,18 @@ class MenuListCollectionViewCell: UICollectionViewCell {
         contentView.clipsToBounds = true
         contentView.layer.borderWidth = 1
         contentView.layer.borderColor = UIColor(red: 128/255, green: 202/255, blue: 255/255, alpha: 1.0).cgColor
+        
+        setCellShadow()
     }
     
-    
+    // cell shadow 설정
+    func setCellShadow() {
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        contentView.layer.shadowOpacity = 0.2
+        contentView.layer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        contentView.layer.shadowRadius = 1.5
+        contentView.layer.masksToBounds = false
+    }
     
     
 }

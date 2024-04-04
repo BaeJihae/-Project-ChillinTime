@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HVw-GA-TuQ">
+=======
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ols-Qp-oH0">
+>>>>>>> develop
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -135,14 +139,14 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4,500원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVE-w9-3WM">
-                                                    <rect key="frame" x="14" y="163" width="162" height="17"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="14"/>
+                                                    <rect key="frame" x="14" y="164.33333333333334" width="162" height="15.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="13"/>
                                                     <color key="textColor" red="0.10980392160000001" green="0.28235294119999998" blue="0.61960784310000006" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아이스아메리카노" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVB-pd-Iq9">
-                                                    <rect key="frame" x="14" y="142" width="162" height="18"/>
-                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                                    <rect key="frame" x="14" y="145.66666666666666" width="162" height="15.666666666666657"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -223,7 +227,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="500원 포장할인이 적용되었습니다" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rc9-UO-E3G">
-                                        <rect key="frame" x="243.33333333333334" y="6.6666666666666288" width="124.66666666666666" height="11"/>
+                                        <rect key="frame" x="243.33333333333334" y="5" width="124.66666666666666" height="11"/>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="9"/>
                                         <color key="textColor" systemColor="systemRedColor"/>
                                         <nil key="highlightedColor"/>
@@ -234,7 +238,7 @@
                                     <constraint firstItem="ezk-cH-Erz" firstAttribute="leading" secondItem="QrJ-5p-3Wg" secondAttribute="leading" constant="24" id="6va-I8-b8u"/>
                                     <constraint firstItem="4gL-mc-eLs" firstAttribute="top" secondItem="QrJ-5p-3Wg" secondAttribute="top" constant="17" id="8VH-GT-50f"/>
                                     <constraint firstAttribute="trailing" secondItem="aGm-O7-wLh" secondAttribute="trailing" constant="24" id="9ZN-4B-6fq"/>
-                                    <constraint firstItem="Rc9-UO-E3G" firstAttribute="top" secondItem="QrJ-5p-3Wg" secondAttribute="top" constant="6.5" id="JKR-6w-iAy"/>
+                                    <constraint firstItem="Rc9-UO-E3G" firstAttribute="top" secondItem="QrJ-5p-3Wg" secondAttribute="top" constant="5" id="JKR-6w-iAy"/>
                                     <constraint firstItem="Xkq-p6-Lbf" firstAttribute="top" secondItem="QrJ-5p-3Wg" secondAttribute="top" constant="17" id="Ngl-V6-z2x"/>
                                     <constraint firstItem="aGm-O7-wLh" firstAttribute="leading" secondItem="4gL-mc-eLs" secondAttribute="trailing" constant="8" id="XGs-tb-tD7"/>
                                     <constraint firstItem="Rc9-UO-E3G" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="QrJ-5p-3Wg" secondAttribute="leading" constant="20" symbolic="YES" id="coN-5R-psm"/>
@@ -301,7 +305,7 @@
                                                         <constraint firstAttribute="height" constant="10" id="dfO-S9-jS8"/>
                                                     </constraints>
                                                     <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                    <state key="normal" title="Button" image="deleteBtn"/>
+                                                    <state key="normal" backgroundImage="xButton-02"/>
                                                     <connections>
                                                         <action selector="deleteButtonAction:" destination="7Wr-d8-YK5" eventType="touchUpInside" id="eqm-0I-lGI"/>
                                                     </connections>
@@ -364,6 +368,9 @@
                                                 <state key="normal">
                                                     <imageReference key="image" image="HomeButton" symbolScale="medium"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="homeButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tzj-JR-pyV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9zO-GG-XLn">
                                                 <rect key="frame" x="40" y="0.0" width="35" height="35"/>
@@ -448,14 +455,17 @@
                     </view>
                     <connections>
                         <outlet property="adeBtn" destination="m25-50-yf4" id="36P-d0-eQ1"/>
+                        <outlet property="allCancelButton" destination="JoT-Bk-fuS" id="u7t-QR-OsH"/>
                         <outlet property="backButton" destination="9zO-GG-XLn" id="ruv-Uh-XBr"/>
                         <outlet property="bestBtn" destination="Nka-Qi-5sL" id="x6j-wt-Aei"/>
+                        <outlet property="cartBackView" destination="QrJ-5p-3Wg" id="bqu-3x-EPd"/>
                         <outlet property="cartNumLabel" destination="Xkq-p6-Lbf" id="1iP-Qv-zbH"/>
                         <outlet property="cartTableView" destination="cxp-oc-QHA" id="dDg-1t-hCf"/>
                         <outlet property="coffeeBtn" destination="t14-go-GNM" id="gEC-y0-HAD"/>
                         <outlet property="dessertBtn" destination="XO8-9i-CBQ" id="uON-MB-cIQ"/>
                         <outlet property="homeButton" destination="D2A-yK-LRX" id="Uqp-lJ-yof"/>
                         <outlet property="menuCollectionView" destination="vOS-0o-L8f" id="oJy-lE-e8F"/>
+                        <outlet property="orderButton" destination="Pa0-Oq-Ogr" id="5Li-Pt-30I"/>
                         <outlet property="smoothieBtn" destination="lBs-mw-wgG" id="AWk-kz-dn1"/>
                         <outlet property="stackView" destination="bvW-Sq-bAm" id="TAp-QP-Pr6"/>
                         <outlet property="teaBtn" destination="Mnx-kl-9Le" id="eX5-su-qfm"/>
@@ -520,29 +530,60 @@
             </objects>
             <point key="canvasLocation" x="-1297" y="-58"/>
         </scene>
+        <!--Chillin Cover View Controller-->
+        <scene sceneID="MUr-Xs-qRe">
+            <objects>
+                <viewController storyboardIdentifier="ChillinCoverViewController" id="Ols-Qp-oH0" customClass="ChillinCoverViewController" customModule="ChillinTime_Kiosk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nL5-bW-hWz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVH-Le-MA3">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.50283372400000004" green="0.79187923670000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pS9-mq-TzE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pS9-mq-TzE" firstAttribute="top" secondItem="VVH-Le-MA3" secondAttribute="top" constant="59" id="0ts-mb-jxh"/>
+                            <constraint firstItem="VVH-Le-MA3" firstAttribute="leading" secondItem="pS9-mq-TzE" secondAttribute="leading" id="Uss-RC-zqt"/>
+                            <constraint firstItem="VVH-Le-MA3" firstAttribute="bottom" secondItem="pS9-mq-TzE" secondAttribute="bottom" constant="34" id="Uv3-R6-Edf"/>
+                            <constraint firstItem="pS9-mq-TzE" firstAttribute="trailing" secondItem="VVH-Le-MA3" secondAttribute="trailing" id="eVC-5A-gYA"/>
+                            <constraint firstItem="VVH-Le-MA3" firstAttribute="centerX" secondItem="pS9-mq-TzE" secondAttribute="centerX" id="itg-iI-zDP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="VVH-Le-MA3" id="LgB-Xx-uZi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2l-jx-uPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2004" y="-58"/>
+        </scene>
     </scenes>
     <resources>
         <image name="AllCancel 1" width="275.5" height="83.5"/>
         <image name="BackButton" width="386" height="386"/>
-        <image name="COLD" width="209" height="209"/>
-        <image name="HOT" width="208.5" height="209"/>
+        <image name="COLD" width="418" height="418"/>
+        <image name="HOT" width="417" height="418"/>
         <image name="HereImage" width="375" height="375"/>
         <image name="HomeButton" width="386" height="386"/>
         <image name="Order 1" width="275.5" height="83.5"/>
         <image name="TogoImage" width="375" height="375.5"/>
         <image name="buttonBackground" width="77" height="22"/>
-        <image name="deleteBtn" width="10" height="10"/>
         <image name="minus" catalog="system" width="128" height="26"/>
         <image name="mug" catalog="system" width="128" height="125"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="xButton-02" width="208.5" height="208.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tableCellBlueTextColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

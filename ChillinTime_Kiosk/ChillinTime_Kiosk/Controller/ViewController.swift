@@ -24,6 +24,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var cartNumLabel: UILabel!
     @IBOutlet weak var totalNumLabel: UILabel!
     @IBOutlet weak var togoDiscountMessage: UILabel!
+    @IBOutlet weak var cartBackView: UIView!
+    @IBOutlet weak var allCancelButton: UIButton!
+    @IBOutlet weak var orderButton: UIButton!
     
     
     // 카테고리 버튼
@@ -62,8 +65,19 @@ class ViewController: UIViewController {
         
         // 라벨 줄 1줄로 설정 및 라벨 사이즈 자동 설정
         setNumberOfLines()
+        
+        // cartBackgroundView 설정
+        setCartBackView()
+        
+        // button shadow 설정
+        setButtonShadow(button: allCancelButton)
+        setButtonShadow(button: orderButton)
     }
 
+    
+    
+    
+    // MARK: - categoryButton
     
     // 버튼 선택 시 category 변경 ( 카테고리 버튼 연결 )
     @IBAction func reloadBeverages(_ sender: UIButton) {
@@ -81,6 +95,10 @@ class ViewController: UIViewController {
     }
     
     
+    
+    
+    // MARK: - 모두 취소 버튼
+    
     // 모두 취소 버튼 클릭 시 구현
     @IBAction func allCancelButton(_ sender: UIButton) {
         
@@ -95,11 +113,8 @@ class ViewController: UIViewController {
                 
                 self.cartDataManager.removeAllData()
                 self.setCartLabel()
-                print("메뉴가 삭제되었습니다.")
-                
             } else {
-                
-                print("삭제할 메뉴가 없습니다.")
+                self.makeNoticeAlert(message: "삭제할 메뉴가 없습니다.")
             }
             
             self.cartTableView.reloadData()
@@ -111,13 +126,9 @@ class ViewController: UIViewController {
     }
     
     
-    // 뒤로가기 버튼 구현
-    @IBAction func backButtonTapped(_ sender: UIButton) {
-        
-        self.cartDataManager.removeAllData()
-        dismiss(animated: true, completion: nil)
-    }
     
+    
+    // MARK: - 주문하기 버튼
     
     // 주문 버튼 클릭 시 구현
     @IBAction func orderButton(_ sender: UIButton) {
@@ -130,6 +141,8 @@ class ViewController: UIViewController {
         let confirmButton = UIAlertAction(title: "확인", style: .default) { _ in
             if !self.cartDataManager.getCartData().isEmpty {
                 self.showPaymentScreen()
+            }else {
+                self.makeNoticeAlert(message: "장바구니가 비어있습니다.")
             }
         }
         
@@ -137,24 +150,61 @@ class ViewController: UIViewController {
         
         self.present(alertControl, animated: true, completion: nil)
     }
-
     
-    // 처음 화면 로드 시 버튼 컬러 변경
-    func setBackColor() {
-        changeBackColor(button: bestBtn)
+    
+    func makeNoticeAlert(message: String) {
+        
+        let errorAlert = UIAlertController(title: "Notice", message: message, preferredStyle: .alert)
+        
+        let okayButton = UIAlertAction(title: "확인", style: .default)
+        
+        errorAlert.addAction(okayButton)
+        
+        self.present(errorAlert, animated: true)
     }
     
     
+    
+    
+    // MARK: - 홈 버튼
+    
+    // 홈 버튼 구현
+    @IBAction func homeButtonTapped(_ sender: UIButton) {
+        
+        self.cartDataManager.removeAllData()
+        
+        guard let vcName = self.storyboard?.instantiateViewController(withIdentifier: "ChillinCoverViewController") as? ChillinCoverViewController else {
+            return
+        }
+        
+        // 전체 화면으로 설정 / 전환 애니메이션
+        vcName.modalPresentationStyle = .fullScreen
+        
+        self.present(vcName, animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    // MARK: - 뒤로가기 버튼
+    
+    // 뒤로가기 버튼 구현
+    @IBAction func backButtonTapped(_ sender: UIButton) {
+        
+        self.cartDataManager.removeAllData()
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    
+    
+    // MARK: - 카트 라벨 설정
+
     // cart에 담긴 총 합과 cart에 담긴 총 개수 글자 하이라이트 세팅
     func setCartLabelHighlight() {
+        
         highlightNumbers(inLabel: cartNumLabel)
         highlightNumbers(inLabel: totalNumLabel)
-    }
-    
-    
-    // 할인 메세지 설정
-    func setDiscountMessage() {
-        togoDiscountMessage.isHidden = isTogo ? false : true
     }
     
     
@@ -181,12 +231,6 @@ class ViewController: UIViewController {
     
         cartNumLabel.text = "\(cartNum)개"
         totalNumLabel.text = "\(totalPriceResult)원"
-    }
-    
-    
-    // 결제 페이지 이동
-    func showPaymentScreen(){
-        print("결제")
     }
     
     
@@ -218,6 +262,58 @@ class ViewController: UIViewController {
     }
     
     
+    
+    
+    // MARK: - setting 구현
+    
+    // 할인 메세지 설정
+    func setDiscountMessage() {
+        
+        togoDiscountMessage.isHidden = isTogo ? false : true
+    }
+    
+    // 결제 페이지 이동
+    func showPaymentScreen(){
+        
+        print("결제")
+    }
+
+    
+    // 처음 화면 로드 시 버튼 컬러 변경
+    func setBackColor() {
+        
+        changeBackColor(button: bestBtn)
+    }
+    
+    
+    // Cart Background 둥글게, 그림자 설정
+    func setCartBackView() {
+        
+        cartBackView.layer.cornerRadius = 10
+        cartBackView.clipsToBounds = true
+        
+        cartBackView.layer.shadowColor = UIColor.black.cgColor
+        cartBackView.layer.shadowOffset = CGSize(width: 0, height: -2)
+        cartBackView.layer.shadowOpacity = 0.1
+        cartBackView.layer.shadowRadius = 5
+        cartBackView.layer.masksToBounds = false
+    }
+    
+    
+    // Button Shadow 설정
+    func setButtonShadow(button: UIButton) {
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 2)
+        button.layer.shadowOpacity = 0.1
+        button.layer.shadowRadius = 3
+        button.layer.masksToBounds = false
+    }
+    
+    
+    
+    
+    // MARK: - Category 버튼 구현
+
     // 배경 컬러 변경 구현
     private func changeBackColor(button: UIButton) {
         let maskPath = UIBezierPath(roundedRect: button.bounds,
@@ -275,6 +371,9 @@ class ViewController: UIViewController {
 }
 
 
+
+
+// MARK: - CollectionView 구현
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
@@ -342,6 +441,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 
 
 
+
+// MARK: - TableView 구현
+
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     
     
@@ -397,6 +499,10 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             cell.selectedLabel.text = cartData[indexPath.row].cartName
             cell.countLabel.text = String(cartData[indexPath.row].cartNum)
         }
+
+        
+        // cell 선택 안되도록 설정
+        cell.selectionStyle = .none
         
         
         return cell

@@ -16,7 +16,11 @@
 					<key>UISceneDelegateClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
 					<key>UISceneStoryboardFile</key>
+<<<<<<< HEAD
 					<string>SionVC2</string>
+=======
+					<string>Yujin2</string>
+>>>>>>> develop
 				</dict>
 			</array>
 		</dict>
