@@ -14,8 +14,8 @@ struct CartDataManager {
     
     
     // cart 데이터 추가
-    mutating func addCartData(name: String) {
-        CartDataManager.cart.filter{ $0.cartName == name }.count == 0 ? CartDataManager.cart.append(CartData(cartNum: 1, cartName: name)) : print("이미 들어있는 메뉴입니다.")
+    mutating func addCartData(name: String, price: Int) {
+        CartDataManager.cart.filter{ $0.cartName == name }.count == 0 ? CartDataManager.cart.append(CartData(cartNum: 1, cartName: name, cartPrice: price)) : print("이미 들어있는 메뉴입니다.")
     }
     
     
@@ -37,5 +37,25 @@ struct CartDataManager {
         CartDataManager.cart[index.row].cartNum = cartNum
     }
     
+    
+    // cart 물건의 수
+    func countCartData() -> Int {
+        return CartDataManager.cart.reduce(0) { $0 + $1.cartNum }
+    }
+    
+    
+    // cart 총 합
+    func countTotal(_ isTogo: Bool) -> Int {
+        if isTogo {
+            return CartDataManager.cart.reduce(0) { $0 + $1.cartNum * $1.cartPrice } - 500
+        }else {
+            return CartDataManager.cart.reduce(0) { $0 + $1.cartNum * $1.cartPrice }
+        }
+    }
+    
+    
+    // cart 전체 삭제
+    func removeAllData() {
+        CartDataManager.cart = []
+    }
 }
-

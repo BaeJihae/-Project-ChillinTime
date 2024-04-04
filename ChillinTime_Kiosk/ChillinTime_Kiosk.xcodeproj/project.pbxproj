@@ -17,9 +17,8 @@
 		2EDAEB7B2BBC675E00337072 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7A2BBC675E00337072 /* MenuData.swift */; };
 		2EDAEB7E2BBC67A700337072 /* CartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7D2BBC67A700337072 /* CartDataManager.swift */; };
 		2EDAEB802BBC719C00337072 /* MenuListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */; };
-		7B561D9D2BBCF60300C8427C /* TotalHomeBack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B561D9C2BBCF60300C8427C /* TotalHomeBack.swift */; };
-		7B561DA12BBCF62E00C8427C /* Sion.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7B561DA02BBCF62E00C8427C /* Sion.storyboard */; };
 		2EDAEB822BBCEC4700337072 /* CartListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */; };
+		7820FFD82BBCE9FF00ED56B5 /* TogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,9 +34,8 @@
 		2EDAEB7A2BBC675E00337072 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
 		2EDAEB7D2BBC67A700337072 /* CartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataManager.swift; sourceTree = "<group>"; };
 		2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListCollectionViewCell.swift; sourceTree = "<group>"; };
-		7B561D9C2BBCF60300C8427C /* TotalHomeBack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalHomeBack.swift; sourceTree = "<group>"; };
-		7B561DA02BBCF62E00C8427C /* Sion.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Sion.storyboard; sourceTree = "<group>"; };
 		2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListTableViewCell.swift; sourceTree = "<group>"; };
+		7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +49,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E8065B52BBD8630000DC793 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EDAEB6F2BBC644B00337072 /* LaunchScreen.storyboard */,
+				2EDAEB6A2BBC644900337072 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E8065B62BBD8640000DC793 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2EDAEB682BBC644900337072 /* ViewController.swift */,
+				7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */,
+				2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */,
+				2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		2EDAEB582BBC644900337072 = {
 			isa = PBXGroup;
 			children = (
@@ -70,17 +88,12 @@
 		2EDAEB632BBC644900337072 /* ChillinTime_Kiosk */ = {
 			isa = PBXGroup;
 			children = (
-				2EDAEB7C2BBC676400337072 /* Model */,
 				2EDAEB642BBC644900337072 /* AppDelegate.swift */,
 				2EDAEB662BBC644900337072 /* SceneDelegate.swift */,
-				2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */,
-				2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */,
-				7B561D9C2BBCF60300C8427C /* TotalHomeBack.swift */,
-				2EDAEB682BBC644900337072 /* ViewController.swift */,
-				7B561DA02BBCF62E00C8427C /* Sion.storyboard */,
-				2EDAEB6A2BBC644900337072 /* Main.storyboard */,
+				2EDAEB7C2BBC676400337072 /* Model */,
+				2E8065B52BBD8630000DC793 /* View */,
+				2E8065B62BBD8640000DC793 /* Controller */,
 				2EDAEB6D2BBC644B00337072 /* Assets.xcassets */,
-				2EDAEB6F2BBC644B00337072 /* LaunchScreen.storyboard */,
 				2EDAEB722BBC644B00337072 /* Info.plist */,
 			);
 			path = ChillinTime_Kiosk;
@@ -157,7 +170,6 @@
 				2EDAEB6E2BBC644B00337072 /* Assets.xcassets in Resources */,
 				2EDAEB712BBC644B00337072 /* Base in Resources */,
 				2EDAEB6C2BBC644900337072 /* Base in Resources */,
-				7B561DA12BBCF62E00C8427C /* Sion.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -171,8 +183,8 @@
 				2EDAEB692BBC644900337072 /* ViewController.swift in Sources */,
 				2EDAEB7E2BBC67A700337072 /* CartDataManager.swift in Sources */,
 				2EDAEB792BBC673B00337072 /* CartData.swift in Sources */,
+				7820FFD82BBCE9FF00ED56B5 /* TogoViewController.swift in Sources */,
 				2EDAEB7B2BBC675E00337072 /* MenuData.swift in Sources */,
-				7B561D9D2BBCF60300C8427C /* TotalHomeBack.swift in Sources */,
 				2EDAEB652BBC644900337072 /* AppDelegate.swift in Sources */,
 				2EDAEB802BBC719C00337072 /* MenuListCollectionViewCell.swift in Sources */,
 				2EDAEB672BBC644900337072 /* SceneDelegate.swift in Sources */,
@@ -333,7 +345,7 @@
 				INFOPLIST_FILE = ChillinTime_Kiosk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Sion;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -366,7 +378,7 @@
 				INFOPLIST_FILE = ChillinTime_Kiosk/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Sion;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
