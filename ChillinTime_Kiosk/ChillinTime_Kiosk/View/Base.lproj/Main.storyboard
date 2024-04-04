@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HVw-GA-TuQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ols-Qp-oH0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -519,6 +519,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Hl-7b-E3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1297" y="-58"/>
+        </scene>
+        <!--Chillin Cover View Controller-->
+        <scene sceneID="MUr-Xs-qRe">
+            <objects>
+                <viewController storyboardIdentifier="ChillinCoverViewController" id="Ols-Qp-oH0" customClass="ChillinCoverViewController" customModule="ChillinTime_Kiosk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nL5-bW-hWz">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVH-Le-MA3">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="0.50283372400000004" green="0.79187923670000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pS9-mq-TzE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pS9-mq-TzE" firstAttribute="top" secondItem="VVH-Le-MA3" secondAttribute="top" constant="59" id="0ts-mb-jxh"/>
+                            <constraint firstItem="VVH-Le-MA3" firstAttribute="leading" secondItem="pS9-mq-TzE" secondAttribute="leading" id="Uss-RC-zqt"/>
+                            <constraint firstItem="VVH-Le-MA3" firstAttribute="bottom" secondItem="pS9-mq-TzE" secondAttribute="bottom" constant="34" id="Uv3-R6-Edf"/>
+                            <constraint firstItem="pS9-mq-TzE" firstAttribute="trailing" secondItem="VVH-Le-MA3" secondAttribute="trailing" id="eVC-5A-gYA"/>
+                            <constraint firstItem="VVH-Le-MA3" firstAttribute="centerX" secondItem="pS9-mq-TzE" secondAttribute="centerX" id="itg-iI-zDP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="VVH-Le-MA3" id="LgB-Xx-uZi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2l-jx-uPp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2004" y="-58"/>
         </scene>
     </scenes>
     <resources>
