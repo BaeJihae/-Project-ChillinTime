@@ -13,12 +13,14 @@ class ChillinCoverViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var touchMeLabel: UILabel!
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        imageView.layer.cornerRadius = imageView.frame.width / 2
-        imageView.layer.masksToBounds = true
+//        imageView.layer.cornerRadius = imageView.frame.width / 2
+//        imageView.layer.masksToBounds = true
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         backgroundView.addGestureRecognizer(tapGesture)
