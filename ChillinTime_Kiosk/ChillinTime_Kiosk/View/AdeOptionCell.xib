@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="AdeOptionCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="AdeOptionCell" id="KGk-i7-Jjw" customClass="AdeOptionCell" customModule="ChillinTime_Kiosk" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="101"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hDl-uj-f0o">
+                        <rect key="frame" x="20" y="15" width="57" height="28"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="04J-AH-bFf">
+                        <rect key="frame" x="87" y="15" width="260" height="28"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Bs-i1-eQO">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1Bs-i1-eQO" secondAttribute="height" multiplier="63:22" id="ei7-oW-lhy"/>
+                                    <constraint firstAttribute="width" constant="80" id="gCj-8B-EEZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="덜 달게" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="덜 달게"/>
+                                <connections>
+                                    <action selector="lessSugarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="So3-OW-e17"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcO-le-Zas">
+                                <rect key="frame" x="90" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="17Y-9U-kNq"/>
+                                    <constraint firstAttribute="width" secondItem="lcO-le-Zas" secondAttribute="height" multiplier="63:22" id="ZMW-nc-tfV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="보통" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="보통"/>
+                                <connections>
+                                    <action selector="noneSugarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RgC-02-abH"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GAA-PS-HLn">
+                                <rect key="frame" x="180" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="JWi-CS-MFg"/>
+                                    <constraint firstAttribute="width" secondItem="GAA-PS-HLn" secondAttribute="height" multiplier="63:22" id="Qsw-Ne-ArS"/>
+                                    <constraint firstAttribute="width" secondItem="GAA-PS-HLn" secondAttribute="height" multiplier="63:22" id="gvF-cM-BCW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="달게" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="달게"/>
+                                <connections>
+                                    <action selector="moreSugarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gfJ-a9-SwZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="얼음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5e-Pr-fJ8">
+                        <rect key="frame" x="20" y="58" width="57" height="28"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kOq-VL-StC">
+                        <rect key="frame" x="87" y="58" width="260" height="28"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BXB-dT-pN8">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="BXB-dT-pN8" secondAttribute="height" multiplier="63:22" id="Ld9-Yq-zuK"/>
+                                    <constraint firstAttribute="width" constant="80" id="gI6-43-2n5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="없음" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="없음"/>
+                                <connections>
+                                    <action selector="noneIceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oer-tO-Rhp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTW-Md-sQY">
+                                <rect key="frame" x="90" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OTW-Md-sQY" secondAttribute="height" multiplier="63:22" id="F1r-Vu-9Tr"/>
+                                    <constraint firstAttribute="width" constant="80" id="WdG-lK-Ec4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="적게" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="적게"/>
+                                <connections>
+                                    <action selector="lessIceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IKm-4T-Aqi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5mv-5V-u0E">
+                                <rect key="frame" x="180" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="Au8-lO-hnq"/>
+                                    <constraint firstAttribute="width" secondItem="5mv-5V-u0E" secondAttribute="height" multiplier="63:22" id="VjR-Pu-Z4w"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="많이" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="많이"/>
+                                <connections>
+                                    <action selector="moreIceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ulP-0k-Jt6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="W5e-Pr-fJ8" firstAttribute="top" secondItem="hDl-uj-f0o" secondAttribute="bottom" constant="15" id="0K3-j7-DMc"/>
+                    <constraint firstAttribute="bottom" secondItem="W5e-Pr-fJ8" secondAttribute="bottom" constant="15" id="2gV-8o-78Y"/>
+                    <constraint firstItem="W5e-Pr-fJ8" firstAttribute="centerY" secondItem="kOq-VL-StC" secondAttribute="centerY" id="3s8-oJ-G5g"/>
+                    <constraint firstItem="04J-AH-bFf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="87" id="L92-tY-xxV"/>
+                    <constraint firstItem="hDl-uj-f0o" firstAttribute="height" secondItem="04J-AH-bFf" secondAttribute="height" id="OIf-lE-5mW"/>
+                    <constraint firstItem="kOq-VL-StC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="87" id="QJE-01-TpW"/>
+                    <constraint firstItem="kOq-VL-StC" firstAttribute="leading" secondItem="W5e-Pr-fJ8" secondAttribute="trailing" constant="10" id="b59-hE-aQX"/>
+                    <constraint firstItem="04J-AH-bFf" firstAttribute="leading" secondItem="hDl-uj-f0o" secondAttribute="trailing" constant="10" id="flK-aI-Cdc"/>
+                    <constraint firstItem="W5e-Pr-fJ8" firstAttribute="height" secondItem="kOq-VL-StC" secondAttribute="height" id="ftr-T9-UER"/>
+                    <constraint firstItem="hDl-uj-f0o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="if2-6E-ZeT"/>
+                    <constraint firstItem="04J-AH-bFf" firstAttribute="centerY" secondItem="hDl-uj-f0o" secondAttribute="centerY" id="jes-FW-NUG"/>
+                    <constraint firstItem="hDl-uj-f0o" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="rZT-js-7h5"/>
+                    <constraint firstItem="W5e-Pr-fJ8" firstAttribute="leading" secondItem="hDl-uj-f0o" secondAttribute="leading" id="sZw-Hc-4d2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="lessIce" destination="OTW-Md-sQY" id="WY5-Av-I7X"/>
+                <outlet property="lessSugar" destination="1Bs-i1-eQO" id="3BO-WV-rPJ"/>
+                <outlet property="moreIce" destination="5mv-5V-u0E" id="SbZ-bE-atu"/>
+                <outlet property="moreSugar" destination="GAA-PS-HLn" id="e9L-mc-khD"/>
+                <outlet property="noneIce" destination="BXB-dT-pN8" id="ajb-m8-Quz"/>
+                <outlet property="noneSugar" destination="lcO-le-Zas" id="ktf-Zi-Hj0"/>
+            </connections>
+            <point key="canvasLocation" x="-79" y="-15"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="optionButton" width="646" height="226"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

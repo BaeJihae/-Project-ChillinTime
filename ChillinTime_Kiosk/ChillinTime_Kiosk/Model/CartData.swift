@@ -24,9 +24,9 @@ enum hotIceOption {
 }
 
 enum iceAmountOption {
-    case none
-    case less
-    case much
+    case noneIce
+    case lessIce
+    case muchIce
 }
 
 enum sugarLevelOption {

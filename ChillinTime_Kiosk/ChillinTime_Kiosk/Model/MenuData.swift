@@ -19,9 +19,9 @@ struct MenuData{
 
 extension MenuData {
     static let bestMenu: [MenuData] = [
-        MenuData(name: "버블흑당라떼", price: 4700, image: UIImage(named: "bubbleBlackLatte"), ice: true, hot: true, category: .best),
-        MenuData(name: "허쉬스트로베리초콜릿", price: 4500, image: UIImage(named: "hushStrawberryChoco"), ice: true, hot: true, category: .best),
-        MenuData(name: "달고나 라떼", price: 3700, image: UIImage(named: "dalgonaLatte"), ice: true, hot: true, category: .best)
+        MenuData(name: "버블흑당라떼", price: 4700, image: UIImage(named: "bubbleBlackLatte"), ice: true, hot: true, category: .coffee),
+        MenuData(name: "허쉬스트로베리초콜릿", price: 4500, image: UIImage(named: "hushStrawberryChoco"), ice: true, hot: true, category: .smoothie),
+        MenuData(name: "달고나 라떼", price: 3700, image: UIImage(named: "dalgonaLatte"), ice: true, hot: true, category: .coffee)
     ]
     static let coffeeMenu: [MenuData] = [
         MenuData(name: "아메리카노", price: 3200, image: UIImage(named: "americano"), ice: true, hot: true, category: .coffee),
