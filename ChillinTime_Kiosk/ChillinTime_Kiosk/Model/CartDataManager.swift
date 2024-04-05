@@ -17,7 +17,7 @@ struct CartDataManager {
     mutating func addCartData(name: String,
                               count: Int,
                               price: Int,
-                              hotIceOption: hotTceOption?,
+                              hotIceOption: hotIceOption?,
                               iceAmountOption: iceAmountOption?,
                               warmingOption: Bool?,
                               sugarLevelOption: sugarLevelOption?) {
@@ -33,6 +33,12 @@ struct CartDataManager {
         }
         
         CartDataManager.cart.append(newdata)
+    }
+    
+    
+    // cart 데이터 불러오기
+    func getCartData() -> [CartData]{
+        return CartDataManager.cart
     }
     
     

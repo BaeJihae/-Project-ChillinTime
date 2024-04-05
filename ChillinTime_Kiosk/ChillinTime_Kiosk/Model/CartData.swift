@@ -12,13 +12,13 @@ struct CartData{
     var cartNum: Int
     var cartName: String
     var cartPrice: Int
-    var hotIceOption: hotTceOption?
+    var hotIceOption: hotIceOption?
     var iceAmountOption: iceAmountOption?
     var warmingOption: Bool?
     var sugarLevelOption: sugarLevelOption?
 }
 
-enum hotTceOption {
+enum hotIceOption {
     case hot
     case ice
 }

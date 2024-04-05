@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E38F15A2BBFB7B500713583 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38F1592BBFB7B500713583 /* MenuCategory.swift */; };
 		2EDAEB652BBC644900337072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB642BBC644900337072 /* AppDelegate.swift */; };
 		2EDAEB672BBC644900337072 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB662BBC644900337072 /* SceneDelegate.swift */; };
 		2EDAEB692BBC644900337072 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB682BBC644900337072 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E38F1592BBFB7B500713583 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
 		2EDAEB612BBC644900337072 /* ChillinTime_Kiosk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChillinTime_Kiosk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDAEB642BBC644900337072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EDAEB662BBC644900337072 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				2EDAEB782BBC673B00337072 /* CartData.swift */,
 				2EDAEB7A2BBC675E00337072 /* MenuData.swift */,
 				2EDAEB7D2BBC67A700337072 /* CartDataManager.swift */,
+				2E38F1592BBFB7B500713583 /* MenuCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				2EDAEB7E2BBC67A700337072 /* CartDataManager.swift in Sources */,
 				2EDAEB792BBC673B00337072 /* CartData.swift in Sources */,
 				7820FFD82BBCE9FF00ED56B5 /* TogoViewController.swift in Sources */,
+				2E38F15A2BBFB7B500713583 /* MenuCategory.swift in Sources */,
 				2EDAEB7B2BBC675E00337072 /* MenuData.swift in Sources */,
 				2EDAEB652BBC644900337072 /* AppDelegate.swift in Sources */,
 				CC3619B62BBD64BF003EE2BE /* ChillinCoverViewController.swift in Sources */,

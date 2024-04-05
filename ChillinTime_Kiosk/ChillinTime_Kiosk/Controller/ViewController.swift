@@ -359,13 +359,7 @@ class ViewController: UIViewController {
         default:
             menuData = MenuData.bestMenu
         }
-        
-        
-        
-        
     }
-    
-    
     
     
 }
@@ -416,19 +410,22 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
 //        
 //        setCartLabel()
         
-        performSegue(withIdentifier: "PopupModal", sender: indexPath.row)
+        // performSegue(withIdentifier: "PopupModal", sender: indexPath.row)
     }
     
     
     // PopupModal로 데이터 전달
-    override func prepare(for segue: UIStoryboardSegue, 
+    override func prepare(for segue: UIStoryboardSegue,
                           sender: (Any)?) {
         
-        if segue.identifier == "PopupModal" {
-            
-            let modalVC = segue.destination as! ModalViewController
-            modalVC.menuData = menuData[sender as! Int]
-        }
+        guard let cell = sender as? MenuListCollectionViewCell else { return }
+        
+        guard let modalVC = segue.destination as? ModalViewController else { return }
+        
+        guard let indexPathRow = menuCollectionView.indexPath(for: cell)?.row else { return }
+        
+        modalVC.menuData = menuData[indexPathRow]
+    
     }
     
     
