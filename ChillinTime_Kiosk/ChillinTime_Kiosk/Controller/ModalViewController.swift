@@ -106,15 +106,32 @@ class ModalViewController: UIViewController {
     
     @IBAction func detailCancelButtonTapped(_ sender: UIButton) {
         
+        guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") else {
+            return
+        }
         
+        //화면 모달로 전환 & 풀스크린
+        mainVC.modalPresentationStyle = .fullScreen
+        mainVC.modalTransitionStyle = .crossDissolve
+        
+        self.present(mainVC, animated: true)
         
     }
     
     
     @IBAction func detailInCartButtonTapped(_ sender: UIButton) {
         
+        guard let mainVC = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") else {
+            return
+        }
         
+        // 화면 모달로 전환 & 풀스크린
+        mainVC.modalPresentationStyle = .fullScreen
+        mainVC.modalTransitionStyle = .crossDissolve
         
+        // 데이터 저장하기
+        
+        self.present(mainVC, animated: true)
         
     }
     
