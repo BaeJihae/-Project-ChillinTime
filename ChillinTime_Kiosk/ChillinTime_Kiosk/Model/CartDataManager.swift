@@ -20,19 +20,19 @@ struct CartDataManager {
                               hotIceOption: hotIceOption?,
                               iceAmountOption: iceAmountOption?,
                               warmingOption: Bool?,
-                              sugarLevelOption: sugarLevelOption?) {
+                              sugarLevelOption: sugarLevelOption?) -> Bool {
         
     
         let newdata = CartData(cartNum: count, cartName: name, cartPrice: price, hotIceOption: hotIceOption, iceAmountOption: iceAmountOption, warmingOption: warmingOption, sugarLevelOption: sugarLevelOption)
             
         for cartdata in CartDataManager.cart{
             if equalable(cartdata1: cartdata, cartdata2: newdata) {
-                print("이미 들어있는 데이터 입니다.")
-                return
+                return false
             }
         }
         
         CartDataManager.cart.append(newdata)
+        return true
     }
     
     

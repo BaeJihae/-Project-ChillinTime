@@ -72,6 +72,7 @@ class ViewController: UIViewController {
         // button shadow 설정
         setButtonShadow(button: allCancelButton)
         setButtonShadow(button: orderButton)
+    
     }
 
     
@@ -180,7 +181,9 @@ class ViewController: UIViewController {
         // 전체 화면으로 설정 / 전환 애니메이션
         vcName.modalPresentationStyle = .fullScreen
         
-        self.present(vcName, animated: true, completion: nil)
+        dismiss(animated: true) {
+            self.present(vcName, animated: true, completion: nil)
+        }
     }
     
     
@@ -400,20 +403,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     
-    // collectionView 선택시 cart에 추가
-    func collectionView(_ collectionView: UICollectionView,
-                        didSelectItemAt indexPath: IndexPath) {
-        
-        // cartDataManager.addCartData(name: menuData[indexPath.row].name, price: menuData[indexPath.row].price)
-        
-//        cartTableView.reloadData()
-//        
-//        setCartLabel()
-        
-        // performSegue(withIdentifier: "PopupModal", sender: indexPath.row)
-    }
-    
-    
     // PopupModal로 데이터 전달
     override func prepare(for segue: UIStoryboardSegue,
                           sender: (Any)?) {
@@ -423,6 +412,11 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
         guard let modalVC = segue.destination as? ModalViewController else { return }
         
         guard let indexPathRow = menuCollectionView.indexPath(for: cell)?.row else { return }
+        
+        modalVC.AddCartButtonAction = {
+            self.cartTableView.reloadData()
+            self.setCartLabel()
+        }
         
         modalVC.menuData = menuData[indexPathRow]
     

@@ -8,7 +8,6 @@
 import Foundation
 
 enum MenuCategory {
-    case best
     case coffee
     case smoothie
     case ade
