@@ -14,14 +14,25 @@ struct CartDataManager {
     
     
     // cart 데이터 추가
-    mutating func addCartData(name: String, price: Int) {
-        CartDataManager.cart.filter{ $0.cartName == name }.count == 0 ? CartDataManager.cart.append(CartData(cartNum: 1, cartName: name, cartPrice: price)) : print("이미 들어있는 메뉴입니다.")
-    }
+    mutating func addCartData(name: String,
+                              count: Int,
+                              price: Int,
+                              hotIceOption: hotTceOption?,
+                              iceAmountOption: iceAmountOption?,
+                              warmingOption: Bool?,
+                              sugarLevelOption: sugarLevelOption?) {
+        
     
-    
-    // cart 데이터 받기
-    func getCartData() -> [CartData] {
-        return CartDataManager.cart
+        let newdata = CartData(cartNum: count, cartName: name, cartPrice: price, hotIceOption: hotIceOption, iceAmountOption: iceAmountOption, warmingOption: warmingOption, sugarLevelOption: sugarLevelOption)
+            
+        for cartdata in CartDataManager.cart{
+            if equalable(cartdata1: cartdata, cartdata2: newdata) {
+                print("이미 들어있는 데이터 입니다.")
+                return
+            }
+        }
+        
+        CartDataManager.cart.append(newdata)
     }
     
     
@@ -57,5 +68,15 @@ struct CartDataManager {
     // cart 전체 삭제
     func removeAllData() {
         CartDataManager.cart = []
+    }
+    
+    
+    // cart값 비교 함수
+    private func equalable(cartdata1: CartData, cartdata2: CartData) -> Bool {
+        if cartdata1.cartName != cartdata2.cartName || cartdata1.hotIceOption == cartdata2.hotIceOption || cartdata1.iceAmountOption == cartdata2.iceAmountOption || cartdata1.sugarLevelOption != cartdata2.sugarLevelOption || cartdata1.warmingOption != cartdata2.warmingOption {
+                return false
+        } else {
+            return true
+        }
     }
 }

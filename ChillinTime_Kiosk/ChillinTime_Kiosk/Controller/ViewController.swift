@@ -410,13 +410,25 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource, 
     func collectionView(_ collectionView: UICollectionView,
                         didSelectItemAt indexPath: IndexPath) {
         
-        cartDataManager.addCartData(name: menuData[indexPath.row].name, price: menuData[indexPath.row].price)
+        // cartDataManager.addCartData(name: menuData[indexPath.row].name, price: menuData[indexPath.row].price)
         
-        cartTableView.reloadData()
+//        cartTableView.reloadData()
+//        
+//        setCartLabel()
         
-        setCartLabel()
+        performSegue(withIdentifier: "PopupModal", sender: indexPath.row)
+    }
+    
+    
+    // PopupModal로 데이터 전달
+    override func prepare(for segue: UIStoryboardSegue, 
+                          sender: (Any)?) {
         
-        performSegue(withIdentifier: "PopupModal", sender: indexPath)
+        if segue.identifier == "PopupModal" {
+            
+            let modalVC = segue.destination as! ModalViewController
+            modalVC.menuData = menuData[sender as! Int]
+        }
     }
     
     
