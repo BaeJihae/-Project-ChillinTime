@@ -26,30 +26,34 @@ class ModalViewController: UIViewController {
     
     var orderAmount = 1
     
-    var menuData: MenuData? {
-        didSet {
-            
-            guard let menuData = menuData else { return }
-            guard let menuImage = menuData.image else { return }
-            
-            detailMenuImageView.image = menuImage
-            
-            detailMenuLabelView.text = menuData.name
-            
-            detailCartCountLabel.text = "\(orderAmount)"
-            
-        }
-    }
+    var menuData: MenuData?
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        setting()
         
         setCustomModalView()
         
         setLabel()
   
         setViewLayer()
+    }
+    
+    
+    func setting() {
+        
+        guard let menuData = menuData else { return }
+        
+        if let menuImage = menuData.image {
+            print(menuImage)
+            detailMenuImageView.image = menuImage
+        }
+        
+        detailMenuLabelView.text = menuData.name
+        
+        detailCartCountLabel.text = "\(orderAmount)"
     }
     
     
@@ -81,13 +85,6 @@ class ModalViewController: UIViewController {
     
     
     @IBAction func detailMinusButtonTapped(_ sender: UIButton) {
-        orderAmount += 1
-        
-        detailCartCountLabel.text = "\(orderAmount)"
-    }
-    
-    
-    @IBAction func detailPlusButtonTapped(_ sender: UIButton) {
         
         if orderAmount >= 2 {
             orderAmount -= 1
@@ -99,12 +96,25 @@ class ModalViewController: UIViewController {
     }
     
     
+    @IBAction func detailPlusButtonTapped(_ sender: UIButton) {
+        
+        orderAmount += 1
+        
+        detailCartCountLabel.text = "\(orderAmount)"
+    }
+    
+    
     @IBAction func detailCancelButtonTapped(_ sender: UIButton) {
+        
+        
         
     }
     
     
     @IBAction func detailInCartButtonTapped(_ sender: UIButton) {
+        
+        
+        
         
     }
     
