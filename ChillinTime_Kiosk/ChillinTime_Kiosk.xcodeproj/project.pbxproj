@@ -19,7 +19,15 @@
 		2EDAEB802BBC719C00337072 /* MenuListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */; };
 		2EDAEB822BBCEC4700337072 /* CartListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */; };
 		7820FFD82BBCE9FF00ED56B5 /* TogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */; };
+		CC0AC5FD2BBED75D0050E21B /* CoffeeOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0AC5FC2BBED75D0050E21B /* CoffeeOptionCell.xib */; };
+		CC0AC5FE2BBED75D0050E21B /* CoffeeOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AC5FB2BBED75D0050E21B /* CoffeeOptionCell.swift */; };
+		CC0AC6052BBEE9660050E21B /* DessertOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0AC6042BBEE9660050E21B /* DessertOptionCell.xib */; };
+		CC0AC6062BBEE9660050E21B /* DessertOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AC6032BBEE9660050E21B /* DessertOptionCell.swift */; };
+		CC0AC60A2BBEE9BE0050E21B /* OptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AC6072BBEE9BE0050E21B /* OptionViewController.swift */; };
+		CC0AC60C2BBEF8F20050E21B /* Option.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0AC60B2BBEF8F20050E21B /* Option.storyboard */; };
 		CC3619B62BBD64BF003EE2BE /* ChillinCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3619B52BBD64BF003EE2BE /* ChillinCoverViewController.swift */; };
+		CC94A5352BBF959100306A5B /* AdeOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94A5332BBF959100306A5B /* AdeOptionCell.swift */; };
+		CC94A5362BBF959100306A5B /* AdeOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC94A5342BBF959100306A5B /* AdeOptionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +45,15 @@
 		2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListCollectionViewCell.swift; sourceTree = "<group>"; };
 		2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListTableViewCell.swift; sourceTree = "<group>"; };
 		7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogoViewController.swift; sourceTree = "<group>"; };
+		CC0AC5FB2BBED75D0050E21B /* CoffeeOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeOptionCell.swift; sourceTree = "<group>"; };
+		CC0AC5FC2BBED75D0050E21B /* CoffeeOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeOptionCell.xib; sourceTree = "<group>"; };
+		CC0AC6032BBEE9660050E21B /* DessertOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertOptionCell.swift; sourceTree = "<group>"; };
+		CC0AC6042BBEE9660050E21B /* DessertOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DessertOptionCell.xib; sourceTree = "<group>"; };
+		CC0AC6072BBEE9BE0050E21B /* OptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionViewController.swift; sourceTree = "<group>"; };
+		CC0AC60B2BBEF8F20050E21B /* Option.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Option.storyboard; sourceTree = "<group>"; };
 		CC3619B52BBD64BF003EE2BE /* ChillinCoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChillinCoverViewController.swift; sourceTree = "<group>"; };
+		CC94A5332BBF959100306A5B /* AdeOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdeOptionCell.swift; sourceTree = "<group>"; };
+		CC94A5342BBF959100306A5B /* AdeOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdeOptionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +114,14 @@
 				2E8065B62BBD8640000DC793 /* Controller */,
 				2EDAEB6D2BBC644B00337072 /* Assets.xcassets */,
 				2EDAEB722BBC644B00337072 /* Info.plist */,
+				CC0AC60B2BBEF8F20050E21B /* Option.storyboard */,
+				CC0AC5FB2BBED75D0050E21B /* CoffeeOptionCell.swift */,
+				CC0AC5FC2BBED75D0050E21B /* CoffeeOptionCell.xib */,
+				CC0AC6032BBEE9660050E21B /* DessertOptionCell.swift */,
+				CC0AC6042BBEE9660050E21B /* DessertOptionCell.xib */,
+				CC94A5332BBF959100306A5B /* AdeOptionCell.swift */,
+				CC94A5342BBF959100306A5B /* AdeOptionCell.xib */,
+				CC0AC6072BBEE9BE0050E21B /* OptionViewController.swift */,
 			);
 			path = ChillinTime_Kiosk;
 			sourceTree = "<group>";
@@ -170,9 +194,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC94A5362BBF959100306A5B /* AdeOptionCell.xib in Resources */,
 				2EDAEB6E2BBC644B00337072 /* Assets.xcassets in Resources */,
+				CC0AC6052BBEE9660050E21B /* DessertOptionCell.xib in Resources */,
 				2EDAEB712BBC644B00337072 /* Base in Resources */,
 				2EDAEB6C2BBC644900337072 /* Base in Resources */,
+				CC0AC5FD2BBED75D0050E21B /* CoffeeOptionCell.xib in Resources */,
+				CC0AC60C2BBEF8F20050E21B /* Option.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,13 +212,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EDAEB692BBC644900337072 /* ViewController.swift in Sources */,
+				CC94A5352BBF959100306A5B /* AdeOptionCell.swift in Sources */,
 				2EDAEB7E2BBC67A700337072 /* CartDataManager.swift in Sources */,
 				2EDAEB792BBC673B00337072 /* CartData.swift in Sources */,
+				CC0AC5FE2BBED75D0050E21B /* CoffeeOptionCell.swift in Sources */,
+				CC0AC6062BBEE9660050E21B /* DessertOptionCell.swift in Sources */,
 				7820FFD82BBCE9FF00ED56B5 /* TogoViewController.swift in Sources */,
 				2EDAEB7B2BBC675E00337072 /* MenuData.swift in Sources */,
 				2EDAEB652BBC644900337072 /* AppDelegate.swift in Sources */,
 				CC3619B62BBD64BF003EE2BE /* ChillinCoverViewController.swift in Sources */,
 				2EDAEB802BBC719C00337072 /* MenuListCollectionViewCell.swift in Sources */,
+				CC0AC60A2BBEE9BE0050E21B /* OptionViewController.swift in Sources */,
 				2EDAEB672BBC644900337072 /* SceneDelegate.swift in Sources */,
 				2EDAEB822BBCEC4700337072 /* CartListTableViewCell.swift in Sources */,
 			);
