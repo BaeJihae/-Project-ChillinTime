@@ -21,6 +21,8 @@
 		2EDAEB822BBCEC4700337072 /* CartListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */; };
 		6AF77C042BBECBD20098A0B4 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF77C032BBECBD20098A0B4 /* ModalViewController.swift */; };
 		7820FFD82BBCE9FF00ED56B5 /* TogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */; };
+		7820FFDA2BBE519800ED56B5 /* Ahyeon2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820FFD92BBE519800ED56B5 /* Ahyeon2ViewController.swift */; };
+		7820FFDC2BBE51F600ED56B5 /* Ahyeon2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7820FFDB2BBE51F600ED56B5 /* Ahyeon2.storyboard */; };
 		CC3619B62BBD64BF003EE2BE /* ChillinCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3619B52BBD64BF003EE2BE /* ChillinCoverViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 		2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListTableViewCell.swift; sourceTree = "<group>"; };
 		6AF77C032BBECBD20098A0B4 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
 		7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogoViewController.swift; sourceTree = "<group>"; };
+		7820FFD92BBE519800ED56B5 /* Ahyeon2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ahyeon2ViewController.swift; sourceTree = "<group>"; };
+		7820FFDB2BBE51F600ED56B5 /* Ahyeon2.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ahyeon2.storyboard; sourceTree = "<group>"; };
 		CC3619B52BBD64BF003EE2BE /* ChillinCoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChillinCoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +107,8 @@
 				2E8065B62BBD8640000DC793 /* Controller */,
 				2EDAEB6D2BBC644B00337072 /* Assets.xcassets */,
 				2EDAEB722BBC644B00337072 /* Info.plist */,
+				7820FFD92BBE519800ED56B5 /* Ahyeon2ViewController.swift */,
+				7820FFDB2BBE51F600ED56B5 /* Ahyeon2.storyboard */,
 			);
 			path = ChillinTime_Kiosk;
 			sourceTree = "<group>";
@@ -179,6 +185,7 @@
 				2EDAEB6E2BBC644B00337072 /* Assets.xcassets in Resources */,
 				2EDAEB712BBC644B00337072 /* Base in Resources */,
 				2EDAEB6C2BBC644900337072 /* Base in Resources */,
+				7820FFDC2BBE51F600ED56B5 /* Ahyeon2.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EDAEB692BBC644900337072 /* ViewController.swift in Sources */,
+				7820FFDA2BBE519800ED56B5 /* Ahyeon2ViewController.swift in Sources */,
 				2EDAEB7E2BBC67A700337072 /* CartDataManager.swift in Sources */,
 				2EDAEB792BBC673B00337072 /* CartData.swift in Sources */,
 				7820FFD82BBCE9FF00ED56B5 /* TogoViewController.swift in Sources */,
