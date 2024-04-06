@@ -38,7 +38,7 @@
                                 <state key="normal" title="덜 달게" backgroundImage="optionButton">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <state key="selected" title="덜 달게"/>
+                                <state key="selected" title="덜 달게" backgroundImage="Option2-10"/>
                                 <connections>
                                     <action selector="lessSugarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="So3-OW-e17"/>
                                 </connections>
@@ -54,7 +54,7 @@
                                 <state key="normal" title="보통" backgroundImage="optionButton">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <state key="selected" title="보통"/>
+                                <state key="selected" title="보통" backgroundImage="Option2-10"/>
                                 <connections>
                                     <action selector="noneSugarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="RgC-02-abH"/>
                                 </connections>
@@ -71,7 +71,7 @@
                                 <state key="normal" title="달게" backgroundImage="optionButton">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <state key="selected" title="달게"/>
+                                <state key="selected" title="달게" backgroundImage="Option2-10"/>
                                 <connections>
                                     <action selector="moreSugarTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gfJ-a9-SwZ"/>
                                 </connections>
@@ -95,10 +95,10 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="없음" backgroundImage="optionButton">
+                                <state key="normal" title="적게" backgroundImage="optionButton">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <state key="selected" title="없음"/>
+                                <state key="selected" backgroundImage="Option2-10"/>
                                 <connections>
                                     <action selector="noneIceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="oer-tO-Rhp"/>
                                 </connections>
@@ -111,10 +111,10 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                <state key="normal" title="적게" backgroundImage="optionButton">
+                                <state key="normal" title="보통" backgroundImage="optionButton">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <state key="selected" title="적게"/>
+                                <state key="selected" backgroundImage="Option2-10"/>
                                 <connections>
                                     <action selector="lessIceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="IKm-4T-Aqi"/>
                                 </connections>
@@ -130,7 +130,7 @@
                                 <state key="normal" title="많이" backgroundImage="optionButton">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <state key="selected" title="많이"/>
+                                <state key="selected" title="많이" backgroundImage="Option2-10"/>
                                 <connections>
                                     <action selector="moreIceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ulP-0k-Jt6"/>
                                 </connections>
@@ -167,6 +167,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Option2-10" width="646" height="225.5"/>
         <image name="optionButton" width="646" height="226"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

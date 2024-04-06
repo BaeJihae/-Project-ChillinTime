@@ -38,7 +38,7 @@
                                 <state key="normal" title="안데움" backgroundImage="optionButton">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <state key="selected" title="안데움"/>
+                                <state key="selected" title="안데움" backgroundImage="Option2-10"/>
                                 <connections>
                                     <action selector="heatButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4Qg-db-dnk"/>
                                 </connections>
@@ -54,7 +54,7 @@
                                 <state key="normal" title="데움" backgroundImage="optionButton">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <state key="selected" title="데움"/>
+                                <state key="selected" title="데움" backgroundImage="Option2-10"/>
                                 <connections>
                                     <action selector="notHeatButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="f12-Y3-IIe"/>
                                 </connections>
@@ -81,6 +81,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="Option2-10" width="646" height="225.5"/>
         <image name="optionButton" width="646" height="226"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
