@@ -40,7 +40,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <state key="selected" title="핫">
-                                    <imageReference key="backgroundImage" image="circle" catalog="system" renderingMode="hierarchical-single">
+                                    <imageReference key="backgroundImage" image="Option2-10" renderingMode="hierarchical-single">
                                         <hierarchicalColors>
                                             <color red="0.92941176469999998" green="0.97052508589999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color systemColor="secondaryLabelColor"/>
@@ -62,7 +62,7 @@
                                 <state key="normal" title="아이스" backgroundImage="optionButton">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <state key="selected" title="아이스" backgroundImage="circle" catalog="system"/>
+                                <state key="selected" title="아이스" backgroundImage="Option2-10"/>
                                 <connections>
                                     <action selector="iceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="UV4-g7-9tK"/>
                                 </connections>
@@ -89,7 +89,7 @@
                                 <state key="normal" title="적게" backgroundImage="optionButton">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <state key="selected" title="적게"/>
+                                <state key="selected" backgroundImage="Option2-10"/>
                                 <connections>
                                     <action selector="noneIceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6Qg-Zb-yCl"/>
                                 </connections>
@@ -104,7 +104,7 @@
                                 <state key="normal" title="보통" backgroundImage="optionButton">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <state key="selected" title="보통"/>
+                                <state key="selected" title="보통" backgroundImage="Option2-10"/>
                                 <connections>
                                     <action selector="lessIceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pVa-bG-yKK"/>
                                 </connections>
@@ -120,7 +120,7 @@
                                 <state key="normal" title="많이" backgroundImage="optionButton">
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
-                                <state key="selected" title="많이"/>
+                                <state key="selected" title="많이" backgroundImage="Option2-10"/>
                                 <connections>
                                     <action selector="moreIceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eby-Y7-QaH"/>
                                 </connections>
@@ -157,16 +157,16 @@
         </tableViewCell>
     </objects>
     <resources>
-        <image name="circle" catalog="system" width="128" height="123"/>
+        <image name="Option2-10" width="646" height="225.5"/>
         <image name="optionButton" width="646" height="226"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="secondaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29803921570000003" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

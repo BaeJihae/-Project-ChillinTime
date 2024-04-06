@@ -31,7 +31,7 @@ class ModalViewController: UIViewController {
     var hotIceOption: hotIceOption?
     var iceAmountOption: iceAmountOption?
     var sugarLevelOption: sugarLevelOption?
-    var warmingOption: Bool?
+    var warmingOption: warmingOption?
     
     var AddCartButtonAction: (() -> Void)?
     
@@ -67,6 +67,10 @@ class ModalViewController: UIViewController {
         setCurrentOption()
     }
     
+    
+    
+    
+    // MARK: - setting
     
     func setting() {
         
@@ -122,6 +126,10 @@ class ModalViewController: UIViewController {
     }
     
     
+    
+    
+    // MARK: - MinusButton
+    
     @IBAction func detailMinusButtonTapped(_ sender: UIButton) {
         
         if orderAmount >= 2 {
@@ -134,6 +142,10 @@ class ModalViewController: UIViewController {
     }
     
     
+    
+    
+    // MARK: - PlusButton
+    
     @IBAction func detailPlusButtonTapped(_ sender: UIButton) {
         
         orderAmount += 1
@@ -142,11 +154,19 @@ class ModalViewController: UIViewController {
     }
     
     
+    
+    
+    // MARK: - CancelButton
+
     @IBAction func detailCancelButtonTapped(_ sender: UIButton) {
         
         dismiss(animated: true)
     }
     
+    
+    
+    
+    // MARK: - InCartButton
     
     @IBAction func detailInCartButtonTapped(_ sender: UIButton) {
         
@@ -155,10 +175,10 @@ class ModalViewController: UIViewController {
         switch menuData.category {
         case .coffee, .tea :
             
-            if hotIceOption == nil || iceAmountOption == nil {
+            if ( hotIceOption == .ice && iceAmountOption == nil ) || hotIceOption == nil{
                 makeNoticeAlert(message: "옵션을 선택하지 않았습니다.")
             } else {
-                if !cartDataManager.addCartData(name: menuData.name, count: orderAmount, price: menuData.price, hotIceOption: hotIceOption, iceAmountOption: iceAmountOption, warmingOption: warmingOption, sugarLevelOption: sugarLevelOption) {
+                if !cartDataManager.addCartData(name: menuData.name, count: orderAmount, price: menuData.price, category: menuData.category, hotIceOption: hotIceOption, iceAmountOption: iceAmountOption, warmingOption: warmingOption, sugarLevelOption: sugarLevelOption) {
                     makeNoticeAlert(message: "이미 선택한 메뉴입니다.")
                 }
                 
@@ -172,7 +192,7 @@ class ModalViewController: UIViewController {
             if iceAmountOption == nil || sugarLevelOption == nil {
                 makeNoticeAlert(message: "옵션을 선택하지 않았습니다.")
             } else {
-                if !cartDataManager.addCartData(name: menuData.name, count: orderAmount, price: menuData.price, hotIceOption: hotIceOption, iceAmountOption: iceAmountOption, warmingOption: warmingOption, sugarLevelOption: sugarLevelOption) {
+                if !cartDataManager.addCartData(name: menuData.name, count: orderAmount, price: menuData.price, category: menuData.category, hotIceOption: hotIceOption, iceAmountOption: iceAmountOption, warmingOption: warmingOption, sugarLevelOption: sugarLevelOption) {
                     makeNoticeAlert(message: "이미 선택한 메뉴입니다.")
                 }
                 
@@ -185,7 +205,7 @@ class ModalViewController: UIViewController {
             if warmingOption == nil {
                 makeNoticeAlert(message: "옵션을 선택하지 않았습니다.")
             } else {
-                if !cartDataManager.addCartData(name: menuData.name, count: orderAmount, price: menuData.price, hotIceOption: hotIceOption, iceAmountOption: iceAmountOption, warmingOption: warmingOption, sugarLevelOption: sugarLevelOption) {
+                if !cartDataManager.addCartData(name: menuData.name, count: orderAmount, price: menuData.price, category: menuData.category, hotIceOption: hotIceOption, iceAmountOption: iceAmountOption, warmingOption: warmingOption, sugarLevelOption: sugarLevelOption) {
                     makeNoticeAlert(message: "이미 선택한 메뉴입니다.")
                 }
                 
@@ -312,6 +332,10 @@ extension ModalViewController: UITableViewDelegate, UITableViewDataSource, Optio
             coffeeCell.hotBtn.isSelected = true
             coffeeCell.iceBtn.isSelected = false
             
+            coffeeCell.lessIce.isEnabled = false
+            coffeeCell.moreIce.isEnabled = false
+            coffeeCell.noneIce.isEnabled = false
+            
             hotIceOption = .hot
         }
     }
@@ -324,6 +348,10 @@ extension ModalViewController: UITableViewDelegate, UITableViewDataSource, Optio
             
             coffeeCell.hotBtn.isSelected = false
             coffeeCell.iceBtn.isSelected = true
+            
+            coffeeCell.lessIce.isEnabled = true
+            coffeeCell.moreIce.isEnabled = true
+            coffeeCell.noneIce.isEnabled = true
             
             hotIceOption = .ice
         }
@@ -398,7 +426,7 @@ extension ModalViewController: UITableViewDelegate, UITableViewDataSource, Optio
             dessertCell.notHeatBTN.isSelected = false
         }
         
-        warmingOption = true
+        warmingOption = .warming
     }
     
     
@@ -411,7 +439,7 @@ extension ModalViewController: UITableViewDelegate, UITableViewDataSource, Optio
             dessertCell.notHeatBTN.isSelected = true
         }
         
-        warmingOption = false
+        warmingOption = .unwarming
     }
     
     

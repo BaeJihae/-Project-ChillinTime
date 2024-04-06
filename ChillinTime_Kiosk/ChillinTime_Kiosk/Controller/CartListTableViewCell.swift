@@ -25,7 +25,7 @@ class CartListTableViewCell: UITableViewCell {
     
     
     // 주문 양
-    var orderAmount = 1
+    var orderAmount: Int = 1
     
     
     override func awakeFromNib() {
@@ -61,8 +61,6 @@ class CartListTableViewCell: UITableViewCell {
         
         // cartData 업데이트
         updateCartNumAction?()
-        
-        print(cartDataManager.getCartData())
     }
     
     
@@ -71,14 +69,10 @@ class CartListTableViewCell: UITableViewCell {
         
         if orderAmount >= 2 {
             orderAmount -= 1
-        } else {
-            print("최소 수량입니다.")
         }
         
         // cartData 업데이트
         updateCartNumAction?()
-        
-        print(cartDataManager.getCartData())
     }
     
     
@@ -89,8 +83,6 @@ class CartListTableViewCell: UITableViewCell {
         
         // cartData 업데이트
         deleteButtonAction?()
-        
-        print(cartDataManager.getCartData())
     }
     
     

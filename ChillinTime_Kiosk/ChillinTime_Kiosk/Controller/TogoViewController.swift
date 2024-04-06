@@ -13,6 +13,7 @@ class TogoViewController: UIViewController {
     @IBOutlet weak var togo: UIButton!
     @IBOutlet weak var here: UIButton!
     
+    let cartDataManager = CartDataManager()
     
     override func viewDidLoad() {
         
@@ -31,7 +32,7 @@ class TogoViewController: UIViewController {
         vcName.modalPresentationStyle = .fullScreen
         vcName.modalTransitionStyle = .crossDissolve
         
-        vcName.isTogo = true
+        cartDataManager.setIsTogo(true)
         
         self.present(vcName, animated: true, completion: nil)
     }
@@ -48,7 +49,7 @@ class TogoViewController: UIViewController {
         vcName.modalPresentationStyle = .fullScreen
         vcName.modalTransitionStyle = .crossDissolve
         
-        vcName.isTogo = false
+        cartDataManager.setIsTogo(false)
         
         self.present(vcName, animated: true, completion: nil)
     }

@@ -38,10 +38,6 @@ class ViewController: UIViewController {
     var cartDataManager = CartDataManager()
     
     
-    // 포장 / 매장 구분 변수
-    var isTogo = true
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,9 +49,6 @@ class ViewController: UIViewController {
         
         // 테이블 뷰 설정
         setTableView()
-        
-        // cart 라벨 하이라이트 설정
-        setCartLabelHighlight()
         
         // cart label 설정
         setCartLabel()
@@ -98,7 +91,7 @@ class ViewController: UIViewController {
     
     
     
-    // MARK: - 모두 취소 버튼
+    // MARK: - AllCancelButton
     
     // 모두 취소 버튼 클릭 시 구현
     @IBAction func allCancelButton(_ sender: UIButton) {
@@ -129,61 +122,35 @@ class ViewController: UIViewController {
     
     
     
-    // MARK: - 주문하기 버튼
+    // MARK: - OrderButton
     
     // 주문 버튼 클릭 시 구현
     @IBAction func orderButton(_ sender: UIButton) {
         
-        let alertControl = UIAlertController(title: "결제하시겠습니까?", message: "", preferredStyle: .alert)
-        
-        let cancelButton = UIAlertAction(title: "취소", style: .default, handler: nil)
-        alertControl.addAction(cancelButton)
-        
-        let confirmButton = UIAlertAction(title: "확인", style: .default) { _ in
-            if !self.cartDataManager.getCartData().isEmpty {
-                self.showPaymentScreen()
-            }else {
-                self.makeNoticeAlert(message: "장바구니가 비어있습니다.")
-            }
+        if self.cartDataManager.getCartData().isEmpty {
+            self.makeNoticeAlert(message: "장바구니가 비어있습니다.")
+        }else {
+            self.showPaymentScreen()
         }
         
-        alertControl.addAction(confirmButton)
-        
-        self.present(alertControl, animated: true, completion: nil)
-    }
-    
-    
-    func makeNoticeAlert(message: String) {
-        
-        let errorAlert = UIAlertController(title: "Notice", message: message, preferredStyle: .alert)
-        
-        let okayButton = UIAlertAction(title: "확인", style: .default)
-        
-        errorAlert.addAction(okayButton)
-        
-        self.present(errorAlert, animated: true)
     }
     
     
     
     
-    // MARK: - 홈 버튼
+    // MARK: - HomeButton
     
     // 홈 버튼 구현
     @IBAction func homeButtonTapped(_ sender: UIButton) {
         
         self.cartDataManager.removeAllData()
         
-        guard let vcName = self.storyboard?.instantiateViewController(withIdentifier: "ChillinCoverViewController") as? ChillinCoverViewController else {
-            return
+        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+               window.rootViewController?.dismiss(animated: true, completion: nil)
         }
         
-        // 전체 화면으로 설정 / 전환 애니메이션
-        vcName.modalPresentationStyle = .fullScreen
         
-        dismiss(animated: true) {
-            self.present(vcName, animated: true, completion: nil)
-        }
     }
     
     
@@ -202,14 +169,6 @@ class ViewController: UIViewController {
     
     
     // MARK: - 카트 라벨 설정
-
-    // cart에 담긴 총 합과 cart에 담긴 총 개수 글자 하이라이트 세팅
-    func setCartLabelHighlight() {
-        
-        highlightNumbers(inLabel: cartNumLabel)
-        highlightNumbers(inLabel: totalNumLabel)
-    }
-    
     
     func setNumberOfLines() {
         
@@ -224,6 +183,8 @@ class ViewController: UIViewController {
     // cart label 설정
     func setCartLabel() {
         
+        let isTogo = cartDataManager.getIsTogo()
+        
         let cartNum: Int = cartDataManager.countCartData()
         let totalPrice: Int = cartDataManager.countTotal(isTogo)
         
@@ -234,6 +195,9 @@ class ViewController: UIViewController {
     
         cartNumLabel.text = "\(cartNum)개"
         totalNumLabel.text = "\(totalPriceResult)원"
+        
+        highlightNumbers(inLabel: totalNumLabel)
+        highlightNumbers(inLabel: cartNumLabel)
     }
     
     
@@ -246,7 +210,7 @@ class ViewController: UIViewController {
         // 문자열 내 숫자부분 색상 및 볼드처리
         for (index, character) in text.enumerated() {
             
-            if character.isNumber || character == ","  {
+            if character.isNumber || character == "," || character == "-" {
                 
                 let range = NSRange(location: index,
                                     length: 1)
@@ -272,13 +236,22 @@ class ViewController: UIViewController {
     // 할인 메세지 설정
     func setDiscountMessage() {
         
+        let isTogo = cartDataManager.getIsTogo()
         togoDiscountMessage.isHidden = isTogo ? false : true
     }
     
     // 결제 페이지 이동
     func showPaymentScreen(){
         
-        print("결제")
+        guard let vcName = self.storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as? PaymentViewController else {
+            return
+        }
+        
+        // 전체 화면으로 설정 / 전환 애니메이션
+        vcName.modalPresentationStyle = .popover
+        vcName.modalTransitionStyle = .crossDissolve
+        
+        self.present(vcName, animated: true, completion: nil)
     }
 
     
@@ -310,6 +283,18 @@ class ViewController: UIViewController {
         button.layer.shadowOpacity = 0.1
         button.layer.shadowRadius = 3
         button.layer.masksToBounds = false
+    }
+    
+    
+    func makeNoticeAlert(message: String) {
+        
+        let errorAlert = UIAlertController(title: "Notice", message: message, preferredStyle: .alert)
+        
+        let okayButton = UIAlertAction(title: "확인", style: .default)
+        
+        errorAlert.addAction(okayButton)
+        
+        self.present(errorAlert, animated: true)
     }
     
     
@@ -474,12 +459,14 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         
         guard let cell = cartTableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as? CartListTableViewCell else {
+            
             return UITableViewCell()
         }
         
         
         let cartData = cartDataManager.getCartData()
         
+        cell.orderAmount = cartData[indexPath.row].cartNum
         
         // data 삭제 수행
         cell.deleteButtonAction = {
@@ -501,10 +488,18 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         // cell에 데이터 표시
         if !cartData.isEmpty {
-            cell.selectedLabel.text = cartData[indexPath.row].cartName
+            
+            switch cartData[indexPath.row].hotIceOption {
+            case .hot :
+                cell.selectedLabel.text =  "핫 \(cartData[indexPath.row].cartName)"
+            case .ice:
+                cell.selectedLabel.text =  "아이스 \(cartData[indexPath.row].cartName)"
+            case .none:
+                cell.selectedLabel.text =  "\(cartData[indexPath.row].cartName)"
+            }
             cell.countLabel.text = String(cartData[indexPath.row].cartNum)
         }
-
+        
         
         // cell 선택 안되도록 설정
         cell.selectionStyle = .none
