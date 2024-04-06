@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E38F15A2BBFB7B500713583 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38F1592BBFB7B500713583 /* MenuCategory.swift */; };
+		2E7EA2EF2BC021A400DAEAD7 /* OptionCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7EA2EE2BC021A400DAEAD7 /* OptionCellDelegate.swift */; };
+		2EB6D63A2BC13D2F00510970 /* PaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2EB6D6392BC13D2F00510970 /* PaymentTableViewCell.xib */; };
+		2EB6D63B2BC13D2F00510970 /* PaymentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB6D6382BC13D2F00510970 /* PaymentTableViewCell.swift */; };
+		2EB6D63D2BC1428800510970 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB6D63C2BC1428800510970 /* PaymentViewController.swift */; };
 		2EDAEB652BBC644900337072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB642BBC644900337072 /* AppDelegate.swift */; };
 		2EDAEB672BBC644900337072 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB662BBC644900337072 /* SceneDelegate.swift */; };
 		2EDAEB692BBC644900337072 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB682BBC644900337072 /* ViewController.swift */; };
@@ -16,9 +21,25 @@
 		2EDAEB792BBC673B00337072 /* CartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB782BBC673B00337072 /* CartData.swift */; };
 		2EDAEB7B2BBC675E00337072 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7A2BBC675E00337072 /* MenuData.swift */; };
 		2EDAEB7E2BBC67A700337072 /* CartDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7D2BBC67A700337072 /* CartDataManager.swift */; };
+		2EDAEB802BBC719C00337072 /* MenuListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */; };
+		2EDAEB822BBCEC4700337072 /* CartListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */; };
+		6AF77C042BBECBD20098A0B4 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AF77C032BBECBD20098A0B4 /* ModalViewController.swift */; };
+		7820FFD82BBCE9FF00ED56B5 /* TogoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */; };
+		CC0AC5FD2BBED75D0050E21B /* CoffeeOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0AC5FC2BBED75D0050E21B /* CoffeeOptionCell.xib */; };
+		CC0AC5FE2BBED75D0050E21B /* CoffeeOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AC5FB2BBED75D0050E21B /* CoffeeOptionCell.swift */; };
+		CC0AC6052BBEE9660050E21B /* DessertOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC0AC6042BBEE9660050E21B /* DessertOptionCell.xib */; };
+		CC0AC6062BBEE9660050E21B /* DessertOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0AC6032BBEE9660050E21B /* DessertOptionCell.swift */; };
+		CC3619B62BBD64BF003EE2BE /* ChillinCoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3619B52BBD64BF003EE2BE /* ChillinCoverViewController.swift */; };
+		CC94A5352BBF959100306A5B /* AdeOptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC94A5332BBF959100306A5B /* AdeOptionCell.swift */; };
+		CC94A5362BBF959100306A5B /* AdeOptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC94A5342BBF959100306A5B /* AdeOptionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2E38F1592BBFB7B500713583 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
+		2E7EA2EE2BC021A400DAEAD7 /* OptionCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCellDelegate.swift; sourceTree = "<group>"; };
+		2EB6D6382BC13D2F00510970 /* PaymentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentTableViewCell.swift; sourceTree = "<group>"; };
+		2EB6D6392BC13D2F00510970 /* PaymentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentTableViewCell.xib; sourceTree = "<group>"; };
+		2EB6D63C2BC1428800510970 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		2EDAEB612BBC644900337072 /* ChillinTime_Kiosk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChillinTime_Kiosk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDAEB642BBC644900337072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EDAEB662BBC644900337072 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +51,17 @@
 		2EDAEB782BBC673B00337072 /* CartData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartData.swift; sourceTree = "<group>"; };
 		2EDAEB7A2BBC675E00337072 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
 		2EDAEB7D2BBC67A700337072 /* CartDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartDataManager.swift; sourceTree = "<group>"; };
+		2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuListCollectionViewCell.swift; sourceTree = "<group>"; };
+		2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartListTableViewCell.swift; sourceTree = "<group>"; };
+		6AF77C032BBECBD20098A0B4 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TogoViewController.swift; sourceTree = "<group>"; };
+		CC0AC5FB2BBED75D0050E21B /* CoffeeOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeOptionCell.swift; sourceTree = "<group>"; };
+		CC0AC5FC2BBED75D0050E21B /* CoffeeOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoffeeOptionCell.xib; sourceTree = "<group>"; };
+		CC0AC6032BBEE9660050E21B /* DessertOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertOptionCell.swift; sourceTree = "<group>"; };
+		CC0AC6042BBEE9660050E21B /* DessertOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DessertOptionCell.xib; sourceTree = "<group>"; };
+		CC3619B52BBD64BF003EE2BE /* ChillinCoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChillinCoverViewController.swift; sourceTree = "<group>"; };
+		CC94A5332BBF959100306A5B /* AdeOptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdeOptionCell.swift; sourceTree = "<group>"; };
+		CC94A5342BBF959100306A5B /* AdeOptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdeOptionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +75,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E8065B52BBD8630000DC793 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2EDAEB6F2BBC644B00337072 /* LaunchScreen.storyboard */,
+				2EDAEB6A2BBC644900337072 /* Main.storyboard */,
+				CC0AC5FC2BBED75D0050E21B /* CoffeeOptionCell.xib */,
+				CC0AC6042BBEE9660050E21B /* DessertOptionCell.xib */,
+				CC94A5342BBF959100306A5B /* AdeOptionCell.xib */,
+				2EB6D6392BC13D2F00510970 /* PaymentTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E8065B62BBD8640000DC793 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC3619B52BBD64BF003EE2BE /* ChillinCoverViewController.swift */,
+				7820FFD72BBCE9FF00ED56B5 /* TogoViewController.swift */,
+				2EDAEB682BBC644900337072 /* ViewController.swift */,
+				6AF77C032BBECBD20098A0B4 /* ModalViewController.swift */,
+				2EB6D63C2BC1428800510970 /* PaymentViewController.swift */,
+				2EDAEB7F2BBC719C00337072 /* MenuListCollectionViewCell.swift */,
+				2EDAEB812BBCEC4600337072 /* CartListTableViewCell.swift */,
+				CC0AC5FB2BBED75D0050E21B /* CoffeeOptionCell.swift */,
+				CC0AC6032BBEE9660050E21B /* DessertOptionCell.swift */,
+				CC94A5332BBF959100306A5B /* AdeOptionCell.swift */,
+				2EB6D6382BC13D2F00510970 /* PaymentTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		2EDAEB582BBC644900337072 = {
 			isa = PBXGroup;
 			children = (
@@ -62,13 +125,12 @@
 		2EDAEB632BBC644900337072 /* ChillinTime_Kiosk */ = {
 			isa = PBXGroup;
 			children = (
-				2EDAEB7C2BBC676400337072 /* Model */,
 				2EDAEB642BBC644900337072 /* AppDelegate.swift */,
 				2EDAEB662BBC644900337072 /* SceneDelegate.swift */,
-				2EDAEB682BBC644900337072 /* ViewController.swift */,
-				2EDAEB6A2BBC644900337072 /* Main.storyboard */,
+				2EDAEB7C2BBC676400337072 /* Model */,
+				2E8065B52BBD8630000DC793 /* View */,
+				2E8065B62BBD8640000DC793 /* Controller */,
 				2EDAEB6D2BBC644B00337072 /* Assets.xcassets */,
-				2EDAEB6F2BBC644B00337072 /* LaunchScreen.storyboard */,
 				2EDAEB722BBC644B00337072 /* Info.plist */,
 			);
 			path = ChillinTime_Kiosk;
@@ -80,6 +142,8 @@
 				2EDAEB782BBC673B00337072 /* CartData.swift */,
 				2EDAEB7A2BBC675E00337072 /* MenuData.swift */,
 				2EDAEB7D2BBC67A700337072 /* CartDataManager.swift */,
+				2E38F1592BBFB7B500713583 /* MenuCategory.swift */,
+				2E7EA2EE2BC021A400DAEAD7 /* OptionCellDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -142,9 +206,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC94A5362BBF959100306A5B /* AdeOptionCell.xib in Resources */,
 				2EDAEB6E2BBC644B00337072 /* Assets.xcassets in Resources */,
+				CC0AC6052BBEE9660050E21B /* DessertOptionCell.xib in Resources */,
 				2EDAEB712BBC644B00337072 /* Base in Resources */,
+				2EB6D63A2BC13D2F00510970 /* PaymentTableViewCell.xib in Resources */,
 				2EDAEB6C2BBC644900337072 /* Base in Resources */,
+				CC0AC5FD2BBED75D0050E21B /* CoffeeOptionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,11 +224,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				2EDAEB692BBC644900337072 /* ViewController.swift in Sources */,
+				CC94A5352BBF959100306A5B /* AdeOptionCell.swift in Sources */,
+				2EB6D63B2BC13D2F00510970 /* PaymentTableViewCell.swift in Sources */,
 				2EDAEB7E2BBC67A700337072 /* CartDataManager.swift in Sources */,
 				2EDAEB792BBC673B00337072 /* CartData.swift in Sources */,
+				CC0AC5FE2BBED75D0050E21B /* CoffeeOptionCell.swift in Sources */,
+				CC0AC6062BBEE9660050E21B /* DessertOptionCell.swift in Sources */,
+				2EB6D63D2BC1428800510970 /* PaymentViewController.swift in Sources */,
+				7820FFD82BBCE9FF00ED56B5 /* TogoViewController.swift in Sources */,
+				2E7EA2EF2BC021A400DAEAD7 /* OptionCellDelegate.swift in Sources */,
+				2E38F15A2BBFB7B500713583 /* MenuCategory.swift in Sources */,
 				2EDAEB7B2BBC675E00337072 /* MenuData.swift in Sources */,
 				2EDAEB652BBC644900337072 /* AppDelegate.swift in Sources */,
+				CC3619B62BBD64BF003EE2BE /* ChillinCoverViewController.swift in Sources */,
+				2EDAEB802BBC719C00337072 /* MenuListCollectionViewCell.swift in Sources */,
+				6AF77C042BBECBD20098A0B4 /* ModalViewController.swift in Sources */,
 				2EDAEB672BBC644900337072 /* SceneDelegate.swift in Sources */,
+				2EDAEB822BBCEC4700337072 /* CartListTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
