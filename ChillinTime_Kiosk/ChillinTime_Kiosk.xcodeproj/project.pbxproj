@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E38F15A2BBFB7B500713583 /* MenuCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E38F1592BBFB7B500713583 /* MenuCategory.swift */; };
 		2E7EA2EF2BC021A400DAEAD7 /* OptionCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E7EA2EE2BC021A400DAEAD7 /* OptionCellDelegate.swift */; };
+		2E86187E2BC05FCD0082C534 /* paymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E86187D2BC05FCD0082C534 /* paymentViewController.swift */; };
 		2EDAEB652BBC644900337072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB642BBC644900337072 /* AppDelegate.swift */; };
 		2EDAEB672BBC644900337072 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB662BBC644900337072 /* SceneDelegate.swift */; };
 		2EDAEB692BBC644900337072 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EDAEB682BBC644900337072 /* ViewController.swift */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		2E38F1592BBFB7B500713583 /* MenuCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCategory.swift; sourceTree = "<group>"; };
 		2E7EA2EE2BC021A400DAEAD7 /* OptionCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionCellDelegate.swift; sourceTree = "<group>"; };
+		2E86187D2BC05FCD0082C534 /* paymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = paymentViewController.swift; sourceTree = "<group>"; };
 		2EDAEB612BBC644900337072 /* ChillinTime_Kiosk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChillinTime_Kiosk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EDAEB642BBC644900337072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2EDAEB662BBC644900337072 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				CC0AC5FC2BBED75D0050E21B /* CoffeeOptionCell.xib */,
 				CC0AC6042BBEE9660050E21B /* DessertOptionCell.xib */,
 				CC94A5342BBF959100306A5B /* AdeOptionCell.xib */,
+				2E86187D2BC05FCD0082C534 /* paymentViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				6AF77C042BBECBD20098A0B4 /* ModalViewController.swift in Sources */,
 				2EDAEB672BBC644900337072 /* SceneDelegate.swift in Sources */,
 				2EDAEB822BBCEC4700337072 /* CartListTableViewCell.swift in Sources */,
+				2E86187E2BC05FCD0082C534 /* paymentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
