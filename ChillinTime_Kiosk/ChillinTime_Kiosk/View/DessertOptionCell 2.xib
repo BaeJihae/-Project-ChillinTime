@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="DessertOptionCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="DessertOptionCell" rowHeight="-167" id="KGk-i7-Jjw" customClass="DessertOptionCell" customModule="ChillinTime_Kiosk" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="58"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="58"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="워밍 옵션" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pef-8R-438">
+                        <rect key="frame" x="20" y="15" width="57" height="28"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ye3-sk-a1b">
+                        <rect key="frame" x="87" y="15" width="170" height="28"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eY4-4h-bhJ">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="4TE-zc-e0C"/>
+                                    <constraint firstAttribute="width" secondItem="eY4-4h-bhJ" secondAttribute="height" multiplier="63:22" id="JbZ-xK-vN8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="안데움" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="안데움" backgroundImage="Option2-10"/>
+                                <connections>
+                                    <action selector="heatButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4Qg-db-dnk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eu4-8u-79V">
+                                <rect key="frame" x="90" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Eu4-8u-79V" secondAttribute="height" multiplier="63:22" id="YiY-CQ-tdF"/>
+                                    <constraint firstAttribute="width" constant="80" id="umk-wy-Jln"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="데움" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="데움" backgroundImage="Option2-10"/>
+                                <connections>
+                                    <action selector="notHeatButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="f12-Y3-IIe"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pef-8R-438" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="GLg-lH-MFb"/>
+                    <constraint firstItem="pef-8R-438" firstAttribute="height" secondItem="Ye3-sk-a1b" secondAttribute="height" id="O8f-TT-Ibc"/>
+                    <constraint firstAttribute="bottom" secondItem="pef-8R-438" secondAttribute="bottom" constant="15" id="QDd-ez-cLW"/>
+                    <constraint firstItem="Ye3-sk-a1b" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="87" id="VZ4-7j-84Q"/>
+                    <constraint firstItem="Ye3-sk-a1b" firstAttribute="centerY" secondItem="pef-8R-438" secondAttribute="centerY" id="d1t-sE-UxP"/>
+                    <constraint firstItem="pef-8R-438" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="f8n-bl-k6a"/>
+                    <constraint firstItem="Ye3-sk-a1b" firstAttribute="leading" secondItem="pef-8R-438" secondAttribute="trailing" constant="10" id="q61-3X-hW5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="heatBTN" destination="eY4-4h-bhJ" id="F2w-pd-3UZ"/>
+                <outlet property="notHeatBTN" destination="Eu4-8u-79V" id="YiW-7B-Yr3"/>
+            </connections>
+            <point key="canvasLocation" x="-948.85496183206101" y="42.253521126760567"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Option2-10" width="646" height="225.5"/>
+        <image name="optionButton" width="646" height="226"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

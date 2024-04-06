@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CoffeeOptionCell" rowHeight="101" id="KGk-i7-Jjw" customClass="CoffeeOptionCell" customModule="ChillinTime_Kiosk" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="101"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="101"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="온도" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lvi-pf-BfY">
+                        <rect key="frame" x="20" y="15" width="57" height="28"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="I3b-3L-U9n">
+                        <rect key="frame" x="87" y="15" width="170" height="28"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0P-mc-gGH">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="CMb-x0-1bT"/>
+                                    <constraint firstAttribute="width" secondItem="e0P-mc-gGH" secondAttribute="height" multiplier="63:22" id="t49-V7-Zcs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="핫" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="핫">
+                                    <imageReference key="backgroundImage" image="Option2-10" renderingMode="hierarchical-single">
+                                        <hierarchicalColors>
+                                            <color red="0.92941176469999998" green="0.97052508589999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color systemColor="secondaryLabelColor"/>
+                                            <color systemColor="tertiaryLabelColor"/>
+                                        </hierarchicalColors>
+                                    </imageReference>
+                                </state>
+                                <connections>
+                                    <action selector="hotButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="yVN-Li-udV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7q-3M-wwj">
+                                <rect key="frame" x="90" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="k7q-3M-wwj" secondAttribute="height" multiplier="63:22" id="Zy5-7V-g9I"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="아이스" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="아이스" backgroundImage="Option2-10"/>
+                                <connections>
+                                    <action selector="iceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="UV4-g7-9tK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="얼음" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDD-78-NEy">
+                        <rect key="frame" x="20" y="58" width="57" height="28"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="w4I-BE-142">
+                        <rect key="frame" x="87" y="58" width="260" height="28"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEC-Ga-9G8">
+                                <rect key="frame" x="0.0" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="XEC-Ga-9G8" secondAttribute="height" multiplier="63:22" id="Kum-dY-DsN"/>
+                                    <constraint firstAttribute="width" constant="80" id="v2T-8N-3ZL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="적게" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" backgroundImage="Option2-10"/>
+                                <connections>
+                                    <action selector="noneIceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6Qg-Zb-yCl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uU6-xa-dVw">
+                                <rect key="frame" x="90" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="uU6-xa-dVw" secondAttribute="height" multiplier="63:22" id="MpP-3V-j1T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="보통" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="보통" backgroundImage="Option2-10"/>
+                                <connections>
+                                    <action selector="lessIceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="pVa-bG-yKK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbj-ZB-roz">
+                                <rect key="frame" x="180" y="0.0" width="80" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="mbj-ZB-roz" secondAttribute="height" multiplier="63:22" id="Aht-dG-9fO"/>
+                                    <constraint firstAttribute="width" secondItem="mbj-ZB-roz" secondAttribute="height" multiplier="63:22" id="GqE-w2-h2l"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="많이" backgroundImage="optionButton">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                                <state key="selected" title="많이" backgroundImage="Option2-10"/>
+                                <connections>
+                                    <action selector="moreIceButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="eby-Y7-QaH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="I3b-3L-U9n" firstAttribute="leading" secondItem="Lvi-pf-BfY" secondAttribute="trailing" constant="10" id="3gr-Mp-C05"/>
+                    <constraint firstAttribute="bottom" secondItem="NDD-78-NEy" secondAttribute="bottom" constant="15" id="7t9-DA-SK8"/>
+                    <constraint firstItem="Lvi-pf-BfY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="9nD-cY-CvV"/>
+                    <constraint firstItem="w4I-BE-142" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="87" id="A6Z-sE-f9q"/>
+                    <constraint firstItem="w4I-BE-142" firstAttribute="leading" secondItem="NDD-78-NEy" secondAttribute="trailing" constant="10" id="AJt-mk-hkm"/>
+                    <constraint firstItem="w4I-BE-142" firstAttribute="centerY" secondItem="NDD-78-NEy" secondAttribute="centerY" id="AYS-Yp-Pjt"/>
+                    <constraint firstItem="NDD-78-NEy" firstAttribute="leading" secondItem="Lvi-pf-BfY" secondAttribute="leading" id="JCR-X6-R2Y"/>
+                    <constraint firstItem="NDD-78-NEy" firstAttribute="height" secondItem="w4I-BE-142" secondAttribute="height" id="Ki9-m3-gLE"/>
+                    <constraint firstItem="NDD-78-NEy" firstAttribute="top" secondItem="Lvi-pf-BfY" secondAttribute="bottom" constant="15" id="Uv0-Gg-LgO"/>
+                    <constraint firstItem="Lvi-pf-BfY" firstAttribute="height" secondItem="e0P-mc-gGH" secondAttribute="height" id="VVD-hF-3QE"/>
+                    <constraint firstItem="I3b-3L-U9n" firstAttribute="centerY" secondItem="Lvi-pf-BfY" secondAttribute="centerY" id="XCC-SN-rfT"/>
+                    <constraint firstItem="I3b-3L-U9n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="87" id="dZL-Wg-WLn"/>
+                    <constraint firstItem="Lvi-pf-BfY" firstAttribute="height" secondItem="I3b-3L-U9n" secondAttribute="height" id="haf-vT-8Pb"/>
+                    <constraint firstItem="Lvi-pf-BfY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="oYi-za-uaK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="hotBtn" destination="e0P-mc-gGH" id="nyP-C7-ARU"/>
+                <outlet property="iceBtn" destination="k7q-3M-wwj" id="WdT-jO-vwH"/>
+                <outlet property="lessIce" destination="uU6-xa-dVw" id="bAS-KI-Fox"/>
+                <outlet property="moreIce" destination="mbj-ZB-roz" id="a8n-Xj-5wr"/>
+                <outlet property="noneIce" destination="XEC-Ga-9G8" id="H2y-GT-tQu"/>
+            </connections>
+            <point key="canvasLocation" x="-23.664122137404579" y="23.591549295774648"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Option2-10" width="646" height="225.5"/>
+        <image name="optionButton" width="646" height="226"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

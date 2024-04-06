@@ -316,20 +316,15 @@ class PaymentViewController: UIViewController {
                 
                 peymentAlert.addAction(okayButton)
                 
-                self.present(peymentAlert, animated: true) {
-                    self.cartDataManager.removeAllData()
-                }
+                self.present(peymentAlert, animated: true)
                 
-                if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
-                   let window = sceneDelegate.window {
-                       window.rootViewController?.dismiss(animated: true, completion: nil)
-                }
+                self.cartDataManager.removeAllData()
                 
             }
             
             alertControl.addAction(confirmButton)
             
-            self.present(alertControl, animated: true) {}
+            self.present(alertControl, animated: true, completion: nil)
         }else {
             makeNoticeAlert(message: "결제 방법을 선택하세요.")
         }
