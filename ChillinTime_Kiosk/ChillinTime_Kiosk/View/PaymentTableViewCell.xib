@@ -78,6 +78,7 @@
             <connections>
                 <outlet property="cartCount" destination="av3-ZW-ykd" id="oqc-bG-3k6"/>
                 <outlet property="cartDetailLabel" destination="fQg-ce-nlp" id="5kS-81-7Ol"/>
+                <outlet property="cartImage" destination="K1a-fD-9za" id="Ip8-6u-AVX"/>
                 <outlet property="cartNameLabel" destination="aHs-Em-JcC" id="Ssn-nc-bFS"/>
                 <outlet property="cartPrice" destination="WMd-Dl-750" id="VpM-rA-AUZ"/>
             </connections>

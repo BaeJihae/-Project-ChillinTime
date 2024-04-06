@@ -136,18 +136,6 @@ class ViewController: UIViewController {
     }
     
     
-    func makeNoticeAlert(message: String) {
-        
-        let errorAlert = UIAlertController(title: "Notice", message: message, preferredStyle: .alert)
-        
-        let okayButton = UIAlertAction(title: "확인", style: .default)
-        
-        errorAlert.addAction(okayButton)
-        
-        self.present(errorAlert, animated: true)
-    }
-    
-    
     
     
     // MARK: - HomeButton
@@ -157,16 +145,12 @@ class ViewController: UIViewController {
         
         self.cartDataManager.removeAllData()
         
-        guard let vcName = self.storyboard?.instantiateViewController(withIdentifier: "ChillinCoverViewController") as? ChillinCoverViewController else {
-            return
+        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+               window.rootViewController?.dismiss(animated: true, completion: nil)
         }
         
-        // 전체 화면으로 설정 / 전환 애니메이션
-        vcName.modalPresentationStyle = .fullScreen
         
-        dismiss(animated: true) {
-            self.present(vcName, animated: true, completion: nil)
-        }
     }
     
     
@@ -226,7 +210,7 @@ class ViewController: UIViewController {
         // 문자열 내 숫자부분 색상 및 볼드처리
         for (index, character) in text.enumerated() {
             
-            if character.isNumber || character == ","  {
+            if character.isNumber || character == "," || character == "-" {
                 
                 let range = NSRange(location: index,
                                     length: 1)
@@ -299,6 +283,18 @@ class ViewController: UIViewController {
         button.layer.shadowOpacity = 0.1
         button.layer.shadowRadius = 3
         button.layer.masksToBounds = false
+    }
+    
+    
+    func makeNoticeAlert(message: String) {
+        
+        let errorAlert = UIAlertController(title: "Notice", message: message, preferredStyle: .alert)
+        
+        let okayButton = UIAlertAction(title: "확인", style: .default)
+        
+        errorAlert.addAction(okayButton)
+        
+        self.present(errorAlert, animated: true)
     }
     
     
@@ -470,6 +466,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cartData = cartDataManager.getCartData()
         
+        cell.orderAmount = cartData[indexPath.row].cartNum
         
         // data 삭제 수행
         cell.deleteButtonAction = {
@@ -492,10 +489,17 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         // cell에 데이터 표시
         if !cartData.isEmpty {
             
-            cell.selectedLabel.text = cartData[indexPath.row].cartName
+            switch cartData[indexPath.row].hotIceOption {
+            case .hot :
+                cell.selectedLabel.text =  "핫 \(cartData[indexPath.row].cartName)"
+            case .ice:
+                cell.selectedLabel.text =  "아이스 \(cartData[indexPath.row].cartName)"
+            case .none:
+                cell.selectedLabel.text =  "\(cartData[indexPath.row].cartName)"
+            }
             cell.countLabel.text = String(cartData[indexPath.row].cartNum)
         }
-
+        
         
         // cell 선택 안되도록 설정
         cell.selectionStyle = .none

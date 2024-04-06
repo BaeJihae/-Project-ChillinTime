@@ -175,7 +175,7 @@ class ModalViewController: UIViewController {
         switch menuData.category {
         case .coffee, .tea :
             
-            if ( hotIceOption == .ice && iceAmountOption == nil ) && hotIceOption == nil{
+            if ( hotIceOption == .ice && iceAmountOption == nil ) || hotIceOption == nil{
                 makeNoticeAlert(message: "옵션을 선택하지 않았습니다.")
             } else {
                 if !cartDataManager.addCartData(name: menuData.name, count: orderAmount, price: menuData.price, category: menuData.category, hotIceOption: hotIceOption, iceAmountOption: iceAmountOption, warmingOption: warmingOption, sugarLevelOption: sugarLevelOption) {

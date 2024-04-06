@@ -774,7 +774,6 @@
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxt-gR-VLb">
                                         <rect key="frame" x="15" y="429" width="363" height="53.333333333333314"/>
-                                        <color key="backgroundColor" red="0.92941176469999998" green="0.96862745100000003" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="Rxt-gR-VLb" secondAttribute="height" multiplier="366:54" id="q4p-qL-CoI"/>
                                         </constraints>
@@ -877,7 +876,6 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djl-7K-vdm" userLabel="네이버 버튼">
                                         <rect key="frame" x="201.66666666666663" y="490.33333333333343" width="176.33333333333337" height="72.666666666666686"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="selected" backgroundImage="Option2-10"/>
                                         <connections>
                                             <action selector="naverPayTapped:" destination="WbA-qJ-Riw" eventType="touchUpInside" id="oAD-to-HfD"/>
                                         </connections>
@@ -937,7 +935,7 @@
                                             <stackView opaque="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="zFV-qG-XbO">
                                                 <rect key="frame" x="10" y="10" width="343" height="30"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    주문내역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74U-bx-xkx">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   주문내역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="74U-bx-xkx">
                                                         <rect key="frame" x="0.0" y="0.0" width="205.66666666666666" height="30"/>
                                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                         <color key="textColor" red="0.46666666870000001" green="0.46666666870000001" blue="0.46666666870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -987,16 +985,16 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="EWg-cx-w8L">
-                                                <rect key="frame" x="15.000000000000007" y="330.33333333333331" width="125.66666666666669" height="29.333333333333314"/>
+                                                <rect key="frame" x="15.000000000000007" y="340.33333333333331" width="125.66666666666669" height="19.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="주문할 메뉴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JHk-ae-Kxw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="73.333333333333329" height="29.333333333333332"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="73.333333333333329" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100개" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WhH-eC-T7W">
-                                                        <rect key="frame" x="85.333333333333329" y="0.0" width="40.333333333333329" height="29.333333333333332"/>
+                                                        <rect key="frame" x="85.333333333333329" y="0.0" width="40.333333333333329" height="19.333333333333332"/>
                                                         <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -1004,7 +1002,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-PQ-jw0">
-                                                <rect key="frame" x="202.66666666666663" y="335.33333333333331" width="145.33333333333337" height="19.333333333333314"/>
+                                                <rect key="frame" x="202.66666666666663" y="340.33333333333331" width="145.33333333333337" height="19.333333333333314"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="총 금액" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhD-bi-az2">
                                                         <rect key="frame" x="0.0" y="0.0" width="45.333333333333336" height="19.333333333333332"/>
@@ -1021,7 +1019,7 @@
                                                 </subviews>
                                             </stackView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="포장할인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmY-Dy-GKf">
-                                                <rect key="frame" x="20" y="308.33333333333331" width="50" height="17"/>
+                                                <rect key="frame" x="20" y="318.33333333333331" width="50" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="OjZ-6D-Xfm"/>
                                                 </constraints>
@@ -1030,7 +1028,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-500원" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4f-lF-egb">
-                                                <rect key="frame" x="293" y="308.33333333333331" width="50" height="17"/>
+                                                <rect key="frame" x="293" y="318.33333333333331" width="50" height="17"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="pXU-jp-jNl"/>
                                                 </constraints>
@@ -1042,6 +1040,7 @@
                                         <constraints>
                                             <constraint firstItem="zFV-qG-XbO" firstAttribute="top" secondItem="Y6y-19-PTi" secondAttribute="top" constant="10" id="032-Cn-4GS"/>
                                             <constraint firstItem="zFV-qG-XbO" firstAttribute="leading" secondItem="Y6y-19-PTi" secondAttribute="leading" constant="10" id="8lk-8K-Odl"/>
+                                            <constraint firstItem="y9C-yW-VZ1" firstAttribute="bottom" secondItem="WhH-eC-T7W" secondAttribute="bottom" id="99L-Dc-2Xy"/>
                                             <constraint firstItem="dmY-Dy-GKf" firstAttribute="leading" secondItem="Y6y-19-PTi" secondAttribute="leading" constant="20" id="BBL-eP-QvP"/>
                                             <constraint firstAttribute="trailing" secondItem="zFV-qG-XbO" secondAttribute="trailing" constant="10" id="BGq-64-Ecj"/>
                                             <constraint firstItem="dFU-M1-AcF" firstAttribute="top" secondItem="O63-J8-BFR" secondAttribute="bottom" id="EO3-oy-5r2"/>
@@ -1050,6 +1049,7 @@
                                             <constraint firstItem="dmY-Dy-GKf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3Wv-DO-vxc" secondAttribute="bottom" constant="5" id="GqV-ik-Ny1"/>
                                             <constraint firstItem="O63-J8-BFR" firstAttribute="leading" secondItem="Y6y-19-PTi" secondAttribute="leading" constant="8" id="HOi-vq-eGn"/>
                                             <constraint firstAttribute="bottom" secondItem="EWg-cx-w8L" secondAttribute="bottom" constant="10" id="HjA-eu-1br"/>
+                                            <constraint firstItem="HhD-bi-az2" firstAttribute="centerY" secondItem="JHk-ae-Kxw" secondAttribute="centerY" id="MH3-zp-V7u"/>
                                             <constraint firstAttribute="trailing" secondItem="O63-J8-BFR" secondAttribute="trailing" constant="8" id="VLc-mF-zU7"/>
                                             <constraint firstItem="dFU-M1-AcF" firstAttribute="leading" secondItem="Y6y-19-PTi" secondAttribute="leading" constant="10" id="VTI-wS-tYX"/>
                                             <constraint firstItem="o4f-lF-egb" firstAttribute="top" secondItem="dmY-Dy-GKf" secondAttribute="top" id="Wb2-DF-yCA"/>
@@ -1059,13 +1059,14 @@
                                             <constraint firstItem="EWg-cx-w8L" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3Wv-DO-vxc" secondAttribute="bottom" constant="25" id="gHR-q7-nhi"/>
                                             <constraint firstAttribute="trailing" secondItem="o4f-lF-egb" secondAttribute="trailing" constant="20" id="i25-wq-o4s"/>
                                             <constraint firstItem="3Wv-DO-vxc" firstAttribute="leading" secondItem="Y6y-19-PTi" secondAttribute="leading" constant="8" id="iCE-hi-fbQ"/>
+                                            <constraint firstItem="y9C-yW-VZ1" firstAttribute="top" secondItem="WhH-eC-T7W" secondAttribute="top" id="lKQ-Hv-BuL"/>
                                             <constraint firstAttribute="trailing" secondItem="VcP-PQ-jw0" secondAttribute="trailing" constant="15" id="llF-E3-p3w"/>
-                                            <constraint firstItem="EWg-cx-w8L" firstAttribute="top" secondItem="dmY-Dy-GKf" secondAttribute="bottom" constant="5" id="o9p-7D-JL7"/>
                                             <constraint firstItem="o4f-lF-egb" firstAttribute="bottom" secondItem="dmY-Dy-GKf" secondAttribute="bottom" id="oeu-mj-ZsI"/>
                                             <constraint firstAttribute="trailing" secondItem="dFU-M1-AcF" secondAttribute="trailing" constant="10" id="rDX-bH-mgL"/>
                                             <constraint firstItem="3Wv-DO-vxc" firstAttribute="top" secondItem="dFU-M1-AcF" secondAttribute="bottom" id="tDo-EI-WsC"/>
+                                            <constraint firstItem="HhD-bi-az2" firstAttribute="top" secondItem="JHk-ae-Kxw" secondAttribute="top" id="uBf-op-m90"/>
                                             <constraint firstItem="VcP-PQ-jw0" firstAttribute="centerY" secondItem="EWg-cx-w8L" secondAttribute="centerY" id="zHL-8x-2MI"/>
-                                            <constraint firstItem="VcP-PQ-jw0" firstAttribute="top" secondItem="o4f-lF-egb" secondAttribute="bottom" constant="10" id="zrN-nW-1wN"/>
+                                            <constraint firstItem="VcP-PQ-jw0" firstAttribute="top" secondItem="o4f-lF-egb" secondAttribute="bottom" constant="5" id="zrN-nW-1wN"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -1162,7 +1163,6 @@
         <image name="Modified-22" width="646.5" height="197.5"/>
         <image name="Modified-23" width="646.5" height="196.5"/>
         <image name="Modified-24" width="646.5" height="185"/>
-        <image name="Option2-10" width="646" height="225.5"/>
         <image name="allCancel" width="647" height="197.5"/>
         <image name="apple" width="646.5" height="646.5"/>
         <image name="here" width="646" height="646.5"/>

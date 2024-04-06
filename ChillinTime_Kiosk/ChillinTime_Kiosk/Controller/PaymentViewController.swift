@@ -181,6 +181,21 @@ class PaymentViewController: UIViewController {
         setBorderLine(button: samsungPayButton)
     }
     
+    func setBackgroundColor(_ isSelected: Bool) -> UIColor {
+        if isSelected {
+            return UIColor(red: 128/255, green: 202/255, blue: 255/255, alpha: 0.3)
+        }else {
+            return UIColor.clear
+        }
+    }
+    
+    func setButtonImage() {
+        cardPaymentButton.backgroundColor = setBackgroundColor(cardPaymentButton.isSelected)
+        kakaoPayButton.backgroundColor = setBackgroundColor(kakaoPayButton.isSelected)
+        naverPayButton.backgroundColor = setBackgroundColor(naverPayButton.isSelected)
+        applePayButton.backgroundColor = setBackgroundColor(applePayButton.isSelected)
+        samsungPayButton.backgroundColor = setBackgroundColor(samsungPayButton.isSelected)
+    }
     
     
     
@@ -196,7 +211,7 @@ class PaymentViewController: UIViewController {
         applePayButton.isSelected = false
         samsungPayButton.isSelected = false
         
-        cardPaymentButton.backgroundColor = UIColor(red: 128/255, green: 202/255, blue: 255/255, alpha: 0.3)
+        setButtonImage()
     }
     
     @IBAction func kakaoPayTapped(_ sender: UIButton) {
@@ -209,7 +224,7 @@ class PaymentViewController: UIViewController {
         applePayButton.isSelected = false
         samsungPayButton.isSelected = false
         
-        cardPaymentButton.backgroundColor = UIColor(red: 128/255, green: 202/255, blue: 255/255, alpha: 0.3)
+        setButtonImage()
     }
     
     
@@ -223,7 +238,7 @@ class PaymentViewController: UIViewController {
         applePayButton.isSelected = false
         samsungPayButton.isSelected = false
         
-        cardPaymentButton.backgroundColor = UIColor(red: 128/255, green: 202/255, blue: 255/255, alpha: 0.3)
+        setButtonImage()
     }
     
     
@@ -237,7 +252,7 @@ class PaymentViewController: UIViewController {
         applePayButton.isSelected = true
         samsungPayButton.isSelected = false
         
-        cardPaymentButton.backgroundColor = UIColor(red: 128/255, green: 202/255, blue: 255/255, alpha: 0.3)
+        setButtonImage()
     }
     
     
@@ -251,7 +266,7 @@ class PaymentViewController: UIViewController {
         applePayButton.isSelected = false
         samsungPayButton.isSelected = true
         
-        cardPaymentButton.backgroundColor = UIColor(red: 128/255, green: 202/255, blue: 255/255, alpha: 0.3)
+        setButtonImage()
     }
     
     
@@ -261,17 +276,11 @@ class PaymentViewController: UIViewController {
 
     @IBAction func paymentHomebuttonTapped(_ sender: UIButton) {
         
-        guard let vcName = self.storyboard?.instantiateViewController(withIdentifier: "ChillinCoverViewController") as? ChillinCoverViewController else {
-            return
-        }
+        self.cartDataManager.removeAllData()
         
-        // 전체 화면으로 설정 / 전환 애니메이션
-        vcName.modalPresentationStyle = .fullScreen
-        
-        dismiss(animated: true) {
-            self.dismiss(animated: true) {
-                self.present(vcName, animated: true, completion: nil)
-            }
+        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+           let window = sceneDelegate.window {
+               window.rootViewController?.dismiss(animated: true, completion: nil)
         }
     }
     
@@ -309,9 +318,8 @@ class PaymentViewController: UIViewController {
                 
                 self.present(peymentAlert, animated: true)
                 
-                self.dismiss(animated: true) {
-                    self.cartDataManager.removeAllData()
-                }
+                self.cartDataManager.removeAllData()
+                
             }
             
             alertControl.addAction(confirmButton)
@@ -382,9 +390,9 @@ extension PaymentViewController: UITableViewDelegate, UITableViewDataSource {
         case .coffee, .tea :
             if someCartData.hotIceOption == .ice {
                 guard let iceAmount = someCartData.iceAmountOption else { return UITableViewCell() }
-                
                 cell.cartDetailLabel.text = "\(iceAmount.rawValue)"
             }else {
+                cell.cartImage.isHidden = true
                 cell.cartDetailLabel.text = ""
             }
             

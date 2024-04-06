@@ -13,6 +13,7 @@ class PaymentTableViewCell: UITableViewCell {
     @IBOutlet weak var cartCount: UILabel!
     @IBOutlet weak var cartPrice: UILabel!
     @IBOutlet weak var cartDetailLabel: UILabel!
+    @IBOutlet weak var cartImage: UIImageView!
     
     override func awakeFromNib() {
         
@@ -23,5 +24,6 @@ class PaymentTableViewCell: UITableViewCell {
         
         super.setSelected(selected, animated: animated)
     }
+    
     
 }
