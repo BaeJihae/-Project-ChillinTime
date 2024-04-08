@@ -37,7 +37,7 @@
 <details><summary>  사용하는 기술
 </summary>
 
-  - <img src="https://img.shields.io/badge/Swift-#F05138?style=for-the-badge&logo=Swift&logoColor=white">Swift
+  - <img src="https://img.shields.io/badge/Swift-#F05138?style=for-the-badge&logo=swift.svg&logoColor=white">Swift
   - Figma
   - UIKit
   - Notion
